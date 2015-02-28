@@ -70,7 +70,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
-  m_GravityScale: 1
+  m_GravityScale: 3
   m_FixedAngle: 0
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -78,7 +78,7 @@ Rigidbody2D:
   m_CollisionDetection: 0
 --- !u!61 &6107866
 BoxCollider2D:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 107866}
@@ -120,9 +120,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0497cb926d7eafa4e96af001318e550e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1000
-  maxSpeed: 25
-  jumpSpeed: 32
+  speed: 1500
+  jumpSpeed: 35
   jumpable: 0
   minJump: 2
   invertCmd: 0
@@ -130,7 +129,8 @@ MonoBehaviour:
   mindistjump: 5
   layerNumber: 11
   hardPush: {x: -500, y: 100}
-  softPush: {x: -25, y: 5}
+  softPush: {x: -250, y: 50}
+  curseTime: 1.5
 --- !u!212 &21291082
 SpriteRenderer:
   m_ObjectHideFlags: 1
