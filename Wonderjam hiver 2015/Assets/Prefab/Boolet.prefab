@@ -13,6 +13,7 @@ GameObject:
   - 61: {fileID: 6192734}
   - 114: {fileID: 11452660}
   - 114: {fileID: 11415884}
+  - 114: {fileID: 11413120}
   m_Layer: 0
   m_Name: Boolet
   m_TagString: Untagged
@@ -58,6 +59,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_Size: {x: .159999996, y: .159999996}
   m_Center: {x: 0, y: 0}
+--- !u!114 &11413120
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 192734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5d3f080c1bca8040ad1e1c672e192fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: 5
 --- !u!114 &11415884
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -80,7 +93,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed9a990da513d794ab0507d8a7195c6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
+  speed: 5
   playerposition: {fileID: 0}
   direction: {x: 0, y: 0}
 --- !u!212 &21292734
