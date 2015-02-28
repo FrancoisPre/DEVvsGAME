@@ -18,6 +18,7 @@ public class GameController : MonoBehaviour {
 
 	public void Win(){
 		win=true;
+		audio.Play();
 		//play victory animation
 		//load next level
 	}

@@ -20,6 +20,7 @@ public class DestroyOnContact : MonoBehaviour {
 			if(other.tag == "Player")
 				other.GetComponent<PlayerController>().pushHard();
 			Instantiate (explosion, this.transform.position, Quaternion.identity);
+			audio.Play();
 			Destroy (gameObject);
 		}
 	}
