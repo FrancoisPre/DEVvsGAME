@@ -33,6 +33,13 @@ public class EnemyController : MonoBehaviour {
 
 		
 	}
+
+	void onTriggerEnter2D(Collider2D other){
+		if (other.tag=="Player"){
+			other.GetComponent<PlayerController>().pushSoft();
+		}
+	}
+
 	void OnDrawGizmos()
 	{
 		Vector2 leftRayCastPosition = new Vector2 (rigidbody2D.position.x - rayCastSide -1, rigidbody2D.position.y - rayCastSide);

@@ -14,6 +14,8 @@ public class DestroyOnContact : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D other){
+		if (other.tag == "Player")
+			other.GetComponent<PlayerController>().pushHard();
 		if (other.tag == "Player" || other.tag == "Platform")
 			Destroy(gameObject,0.5f);
 		
