@@ -6,6 +6,7 @@ public class TimerGUI : MonoBehaviour {
 
 	public Text countdown;
 	private int countdownTimer;
+	private bool count=false;
 
 
 	// Use this for initialization
@@ -16,14 +17,19 @@ public class TimerGUI : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		countdownTimer -=  (int) ((Time.deltaTime)*100.0f);
-		if (countdownTimer < 0) {
-			countdownTimer=0;
+		if (count){
+			countdownTimer -=  (int) ((Time.deltaTime)*100.0f);
+			if (countdownTimer < 0) {
+				countdownTimer=0;
+			}
+			Debug.Log (countdownTimer);
+			int minutes = countdownTimer / (60 * 100);
+			int secondes = (countdownTimer % (60 * 100)) / 100;
+			int centaines = countdownTimer % 100;
+			countdown.text = minutes + ":" + secondes + ":" + centaines;
 		}
-		Debug.Log (countdownTimer);
-		int minutes = countdownTimer / (60 * 100);
-		int secondes = (countdownTimer % (60 * 100)) / 100;
-		int centaines = countdownTimer % 100;
-		countdown.text = minutes + ":" + secondes + ":" + centaines;
+	}
+	public void beginCountdown(){
+		count = true;
 	}
 }

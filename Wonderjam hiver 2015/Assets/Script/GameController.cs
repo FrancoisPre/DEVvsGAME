@@ -6,16 +6,15 @@ public class GameController : MonoBehaviour {
     public float timer;
     private float timeOver;
     private bool gameOver = false;
-	private GameObject player;
+	public GameObject player;
+	private GameObject playerInstance;
 	private bool win;
+	public Vector3 playerSpawn;
+	private bool beginGame=false;
 	// Use this for initialization
 	void Start () {
-        timeOver = Time.time + timer;
 	}
 
-	public void PlayerRegistration (GameObject _player) {
-		player=_player;
-	}
 
 	public void Win(){
 		win=true;
@@ -24,20 +23,34 @@ public class GameController : MonoBehaviour {
 	}
 
 	void GameOver(){
-		Application.LoadLevel(Application.loadedLevel);
+		//Application.LoadLevel(Application.loadedLevel);
+		timeOver = Time.time + timer;
+		player.rigidbody2D.position = playerSpawn;
+		player.rigidbody2D.rotation = 0.0f;
+		GameObject.FindWithTag("Exit").GetComponent<GoalControl>().openDoor();
 	}
 
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetKey(KeyCode.R))
 			GameOver();
-        if (Time.time > timeOver&&!gameOver&&!win) {
+        if (Time.time > timeOver&&!gameOver&&!win&&!beginGame) {
             gameOver = true;
-			GameObject.FindWithTag("Exit").GetComponent<GoalControl>().close();
+			GameObject.FindWithTag("Exit").GetComponent<GoalControl>().closeDoor();
 			Invoke("GameOver",5);
         }
-		if (player!=null){
-			Camera.main.transform.position = new Vector3(player.transform.position.x ,player.transform.position.y ,Camera.main.transform.position.z);
+		if (playerInstance!=null){
+			Camera.main.transform.position = new Vector3(playerInstance.transform.position.x ,playerInstance.transform.position.y ,Camera.main.transform.position.z);
 		}
 	}
+
+	public void spawnPlayer(){
+		playerInstance = (GameObject)Instantiate(player,playerSpawn,Quaternion.identity);
+		timeOver = Time.time + timer;
+		beginGame = true;
+		GetComponent<TimerGUI> ().beginCountdown ();
+		GameObject toKill = GameObject.FindWithTag ("TowerBuild");
+		Destroy (toKill);
+	}
 }
+
