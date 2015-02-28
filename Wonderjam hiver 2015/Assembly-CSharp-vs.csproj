@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Script\BooletMover.cs" />
+     <Compile Include="Assets\Script\DestroyByTime.cs" />
      <Compile Include="Assets\Script\DestroyOnContact.cs" />
      <Compile Include="Assets\Script\EnemyController.cs" />
      <Compile Include="Assets\Script\Fear.cs" />
