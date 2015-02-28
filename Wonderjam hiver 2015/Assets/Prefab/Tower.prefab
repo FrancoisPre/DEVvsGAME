@@ -109,7 +109,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerDetected: 0
-  Firerate: 0
+  Firerate: 5
   Timer: 0
   boolet: {fileID: 192734, guid: d7dae68c09d4b364ab0d599e171feffd, type: 2}
   spawn: {fileID: 463302}
