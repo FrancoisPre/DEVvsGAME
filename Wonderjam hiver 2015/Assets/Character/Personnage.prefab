@@ -129,7 +129,7 @@ MonoBehaviour:
   debCurse: 0
   mindistjump: 5
   layerNumber: 11
-  hardPush: {x: -50, y: 10}
+  hardPush: {x: -500, y: 100}
   softPush: {x: -25, y: 5}
 --- !u!212 &21291082
 SpriteRenderer:
