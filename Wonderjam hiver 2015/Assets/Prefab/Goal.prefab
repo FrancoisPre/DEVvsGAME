@@ -10,6 +10,7 @@ GameObject:
   - 4: {fileID: 402142}
   - 212: {fileID: 21202142}
   - 61: {fileID: 6102142}
+  - 114: {fileID: 11467520}
   m_Layer: 0
   m_Name: Goal
   m_TagString: Exit
@@ -40,6 +41,17 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_Size: {x: .159999996, y: .159999996}
   m_Center: {x: 0, y: 0}
+--- !u!114 &11467520
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 102142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46effcf623a8b484aba4d9b58fc1ed02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &21202142
 SpriteRenderer:
   m_ObjectHideFlags: 1

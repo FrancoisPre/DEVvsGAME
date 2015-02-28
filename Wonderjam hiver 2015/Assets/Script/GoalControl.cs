@@ -10,6 +10,7 @@ public class GoalControl : MonoBehaviour {
 	
 	void OnTriggerEnter2D(Collider2D other){
 		if (other.tag==("Player")&&open){
+			GetComponent<SpriteRenderer>().color = Color.green;
 			GameObject.FindWithTag("GameController").GetComponent<GameController>().Win();
 		}
 	}
