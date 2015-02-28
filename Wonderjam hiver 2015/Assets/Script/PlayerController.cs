@@ -5,7 +5,6 @@ public class PlayerController : MonoBehaviour {
     private float movement;
     private Vector2 deplacement;
     public float speed;
-    public float maxSpeed;
     public float jumpSpeed;
     public bool jumpable = false;
     public float minJump;
@@ -17,6 +16,7 @@ public class PlayerController : MonoBehaviour {
 	public int layerNumber;
 	public Vector2 hardPush;
 	public Vector2 softPush;
+	public float curseTime;
 
 	// Use this for initialization
 	void Start () {
@@ -59,13 +59,8 @@ public class PlayerController : MonoBehaviour {
 				jumpable=false;
 	        movement = Input.GetAxis("Horizontal");
 	        deplacement = rigidbody2D.velocity;
-	       /* if (Mathf.Abs(deplacement.y) < minJump)
-	            jumpable = true;
-	        else
-	            jumpable = false;
-*/
-			if (invertCmd)
-				if (debCurse + 5 < Time.time)
+	   		if (invertCmd)
+				if (debCurse + curseTime < Time.time)
 							invertCmd = false;
 						else
 							movement = -movement;
