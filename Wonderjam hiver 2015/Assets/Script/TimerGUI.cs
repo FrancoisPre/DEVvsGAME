@@ -20,6 +20,7 @@ public class TimerGUI : MonoBehaviour {
 		if (countdownTimer < 0) {
 			countdownTimer=0;
 		}
+		Debug.Log (countdownTimer);
 		int minutes = countdownTimer / (60 * 100);
 		int secondes = (countdownTimer % (60 * 100)) / 100;
 		int centaines = countdownTimer % 100;
