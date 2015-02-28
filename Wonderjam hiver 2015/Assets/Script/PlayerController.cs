@@ -14,8 +14,8 @@ public class PlayerController : MonoBehaviour {
 	public float mindistjump;
 	private int layermask;
 	public int layerNumber;
-	public Vector2 hardPush;
-	public Vector2 softPush;
+	public float hardPush;
+	public float softPush;
 	public float curseTime;
 	private bool doubleJump=false;
 
@@ -35,12 +35,14 @@ public class PlayerController : MonoBehaviour {
 	}
    
 
-	public void pushHard(){
-		rigidbody2D.AddRelativeForce(hardPush);
+	public void pushHard(Vector3 direction){
+		Vector3 d = direction.normalized;
+		rigidbody2D.AddRelativeForce(d*hardPush);
 	}
 
-	public void pushSoft(){
-		rigidbody2D.AddRelativeForce(softPush);
+	public void pushSoft(Vector3 direction){
+		Vector3 d = direction.normalized;
+		rigidbody2D.AddRelativeForce(d*softPush);
 	}
 
 	public void changeReady() {
