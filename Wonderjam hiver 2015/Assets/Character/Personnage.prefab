@@ -120,8 +120,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0497cb926d7eafa4e96af001318e550e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
+  speed: 1000
+  jumpSpeed: 32
+=======
   speed: 1500
   jumpSpeed: 35
+>>>>>>> 9b0d253ee89d5a2ee4a118215f73f4cb9ba0b5d2
   jumpable: 0
   minJump: 2
   invertCmd: 0
@@ -129,8 +134,14 @@ MonoBehaviour:
   mindistjump: 5
   layerNumber: 11
   hardPush: {x: -500, y: 100}
+<<<<<<< HEAD
+  softPush: {x: -25, y: 5}
+  curseTime: 0
+  playerReady: 1
+=======
   softPush: {x: -250, y: 50}
   curseTime: 1.5
+>>>>>>> 9b0d253ee89d5a2ee4a118215f73f4cb9ba0b5d2
 --- !u!212 &21291082
 SpriteRenderer:
   m_ObjectHideFlags: 1
