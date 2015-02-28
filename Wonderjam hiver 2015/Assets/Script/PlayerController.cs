@@ -24,9 +24,6 @@ public class PlayerController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		GameObject gc = GameObject.FindWithTag("GameController");
-		GameController gC = gc.GetComponent<GameController>();
-		gC.PlayerRegistration(gameObject);
 		layermask= (1<<layerNumber);
 		//playerReady = false;
 		playerReady = true;

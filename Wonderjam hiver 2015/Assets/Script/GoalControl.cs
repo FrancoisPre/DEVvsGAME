@@ -15,9 +15,14 @@ public class GoalControl : MonoBehaviour {
 		}
 	}
 	
-	public void close(){
+	public void closeDoor(){
 		open=false;
 		GetComponent<SpriteRenderer>().color = Color.white;
+	}
+
+	public void openDoor(){
+		open = true;
+		GetComponent<SpriteRenderer> ().color = Color.black;
 	}
 	
 	// Update is called once per frame
