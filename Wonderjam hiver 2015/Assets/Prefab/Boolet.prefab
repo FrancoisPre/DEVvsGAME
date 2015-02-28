@@ -80,7 +80,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed9a990da513d794ab0507d8a7195c6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
+  speed: 3.80999994
   playerposition: {fileID: 0}
   direction: {x: 0, y: 0}
 --- !u!212 &21292734
@@ -103,8 +103,8 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: .0129757905, g: .0147058964, b: .0132740848, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 4c148e8725a41be4297f8772f55dcbe1, type: 3}
+  m_Color: {r: .996078432, g: .996078432, b: .996078432, a: 1}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
