@@ -29,6 +29,8 @@ public class GameController : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+		if (Input.GetKey(KeyCode.R))
+			GameOver();
         if (Time.time > timeOver&&!gameOver&&!win) {
             gameOver = true;
 			GameObject.FindWithTag("Exit").GetComponent<GoalControl>().close();

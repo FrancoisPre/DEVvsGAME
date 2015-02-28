@@ -43,8 +43,9 @@ public class PlayerController : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate () {
 		if (rigidbody2D.position.y<(-100)){
-			rigidbody2D.position = new Vector3(0.0f,0.0f,0.0f);
+			rigidbody2D.position = new Vector3(5.0f,0.0f,0.0f);
 			rigidbody2D.velocity = new Vector2(0.0f,0.0f);
+			rigidbody2D.rotation = 0.0f;
 		}
 		else{
 			RaycastHit2D hit;
