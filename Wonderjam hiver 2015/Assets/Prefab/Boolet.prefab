@@ -13,6 +13,7 @@ GameObject:
   - 61: {fileID: 6192734}
   - 114: {fileID: 11452660}
   - 114: {fileID: 11415884}
+  - 114: {fileID: 11450002}
   m_Layer: 0
   m_Name: Boolet
   m_TagString: Untagged
@@ -69,6 +70,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebb103be230c1e54e81b89da3952e505, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &11450002
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 192734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5d3f080c1bca8040ad1e1c672e192fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: 5
 --- !u!114 &11452660
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -82,11 +82,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1000
   maxSpeed: 25
-  jumpSpeed: 100
+  jumpSpeed: 150
   jumpable: 0
   minJump: 0
   invertCmd: 0
   debCurse: 0
+  mindistjump: 5
+  layerNumber: 11
 --- !u!212 &21291082
 SpriteRenderer:
   m_ObjectHideFlags: 1

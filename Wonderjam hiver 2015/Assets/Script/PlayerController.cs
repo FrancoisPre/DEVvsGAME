@@ -12,14 +12,22 @@ public class PlayerController : MonoBehaviour {
 	public bool invertCmd = false;
     private float jumpComponnent;
 	public float debCurse;
+	public float mindistjump;
+	private int layermask;
+	public int layerNumber;
 
 	// Use this for initialization
 	void Start () {
 		GameObject gc = GameObject.FindWithTag("GameController");
 		GameController gC = gc.GetComponent<GameController>();
 		gC.PlayerRegistration(gameObject);
+		layermask= (1<<layerNumber);
+
 	}
 
+	void OnDrawGizmos(){
+		Gizmos.DrawLine(rigidbody2D.position, rigidbody2D.position  + new Vector2(0.0f,-mindistjump));
+	}
    
 
 	// Update is called once per frame
@@ -29,13 +37,23 @@ public class PlayerController : MonoBehaviour {
 			rigidbody2D.velocity = new Vector2(0.0f,0.0f);
 		}
 		else{
+			RaycastHit2D hit;
+			Vector2 rayCastPosition = new Vector2(rigidbody2D.position.x,rigidbody2D.position.y-1);
+			Vector2 offset = rayCastPosition - rigidbody2D.position;
+			hit = Physics2D.Raycast(rigidbody2D.position,offset.normalized,offset.sqrMagnitude,layermask);
+			float tmp = hit.distance;
+			Debug.Log(tmp);
+			if (tmp!=0 && tmp<mindistjump)
+				jumpable=true;
+			else
+				jumpable=false;
 	        movement = Input.GetAxis("Horizontal");
 	        deplacement = rigidbody2D.velocity;
-	        if (Mathf.Abs(deplacement.y) < minJump)
+	       /* if (Mathf.Abs(deplacement.y) < minJump)
 	            jumpable = true;
 	        else
 	            jumpable = false;
-
+*/
 			if (invertCmd)
 				if (debCurse + 5 < Time.time)
 							invertCmd = false;
