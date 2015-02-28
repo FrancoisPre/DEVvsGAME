@@ -18,12 +18,16 @@ public class PlayerController : MonoBehaviour {
 	public Vector2 softPush;
 	public float curseTime;
 
+	//Variables d'initialisation (Mode tower -> Mode platformer)
+	public bool playerReady;
+
 	// Use this for initialization
 	void Start () {
 		GameObject gc = GameObject.FindWithTag("GameController");
 		GameController gC = gc.GetComponent<GameController>();
 		gC.PlayerRegistration(gameObject);
 		layermask= (1<<layerNumber);
+		playerReady = false;
 
 	}
 
@@ -38,6 +42,10 @@ public class PlayerController : MonoBehaviour {
 
 	public void pushSoft(){
 		rigidbody2D.AddRelativeForce(softPush);
+	}
+
+	public void changeReady() {
+		playerReady = !playerReady;
 	}
 
 	// Update is called once per frame
@@ -62,15 +70,16 @@ public class PlayerController : MonoBehaviour {
 	        deplacement = rigidbody2D.velocity;
 	   		if (invertCmd)
 				if (debCurse + curseTime < Time.time)
-							invertCmd = false;
-						else
-							movement = -movement;
-	        if (Input.GetButtonDown("Jump") && jumpable)
-	            jumpComponnent = jumpSpeed;
-	        else
-	            jumpComponnent = 0.0f;
-	       
-	        rigidbody2D.AddForce(Time.deltaTime * speed * new Vector2(movement,jumpComponnent));
+					invertCmd = false;
+				else
+					movement = -movement;
+				if (Input.GetButtonDown ("Jump") && jumpable)
+					jumpComponnent = jumpSpeed;
+				else
+					jumpComponnent = 0.0f;
+		       
+				rigidbody2D.AddForce (Time.deltaTime * speed * new Vector2 (movement, jumpComponnent));
+			}
 		}
 	}
 }

@@ -8,6 +8,7 @@ public class TowerController : MonoBehaviour {
 	public float Timer;
 	public GameObject boolet;
 	public Transform spawn;
+	public Transform playerposition;
 
 	// Use this for initialization
 	void Start () {

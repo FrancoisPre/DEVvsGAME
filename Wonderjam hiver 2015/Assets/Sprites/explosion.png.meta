@@ -1,0 +1,205 @@
+fileFormatVersion: 2
+guid: 6b28be7d3a4021c4280eca3a9896f4bd
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Explosion-0
+    21300002: Explosion-1
+    21300004: Explosion-2
+    21300006: Explosion-3
+    21300008: explosion-13
+    21300010: explosion-12
+    21300012: explosion-11
+    21300014: explosion-10
+    21300016: explosion-9
+    21300018: explosion-8
+    21300020: explosion-7
+    21300022: explosion-6
+    21300024: explosion-5
+    21300026: explosion-4
+    21300028: explosion-3
+    21300030: explosion-2
+    21300032: explosion-1
+    21300034: explosion-0
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 50
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: explosion-13
+      rect:
+        serializedVersion: 2
+        x: 2242
+        y: 1434
+        width: 367
+        height: 525
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: explosion-12
+      rect:
+        serializedVersion: 2
+        x: 1828
+        y: 1434
+        width: 390
+        height: 525
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: explosion-11
+      rect:
+        serializedVersion: 2
+        x: 1353
+        y: 1434
+        width: 443
+        height: 525
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: explosion-10
+      rect:
+        serializedVersion: 2
+        x: 869
+        y: 1434
+        width: 411
+        height: 525
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: explosion-9
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 1434
+        width: 303
+        height: 525
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: explosion-8
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 1434
+        width: 381
+        height: 525
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: explosion-7
+      rect:
+        serializedVersion: 2
+        x: 2895
+        y: 2098
+        width: 327
+        height: 368
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 3, y: 0, z: 0, w: 0}
+    - name: explosion-6
+      rect:
+        serializedVersion: 2
+        x: 2466
+        y: 2098
+        width: 307
+        height: 370
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: explosion-5
+      rect:
+        serializedVersion: 2
+        x: 2030
+        y: 2098
+        width: 300
+        height: 370
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: explosion-4
+      rect:
+        serializedVersion: 2
+        x: 1611
+        y: 2098
+        width: 283
+        height: 370
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: explosion-3
+      rect:
+        serializedVersion: 2
+        x: 1203
+        y: 2098
+        width: 296
+        height: 370
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: explosion-2
+      rect:
+        serializedVersion: 2
+        x: 847
+        y: 2098
+        width: 255
+        height: 370
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: explosion-1
+      rect:
+        serializedVersion: 2
+        x: 519
+        y: 2098
+        width: 272
+        height: 370
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: explosion-0
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 2098
+        width: 265
+        height: 370
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
