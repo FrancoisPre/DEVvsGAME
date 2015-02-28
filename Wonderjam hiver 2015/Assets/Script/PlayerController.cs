@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour {
 	public Vector2 hardPush;
 	public Vector2 softPush;
 	public float curseTime;
+	private bool doubleJump=false;
 
 	//Variables d'initialisation (Mode tower -> Mode platformer)
 	public bool playerReady;
@@ -73,8 +74,14 @@ public class PlayerController : MonoBehaviour {
 					invertCmd = false;
 				else
 					movement = -movement;
-				if (Input.GetButtonDown ("Jump") && jumpable)
+				if (Input.GetButtonDown ("Jump") && jumpable){
 					jumpComponnent = jumpSpeed;
+					doubleJump=true;
+				}
+				else if (doubleJump&&Input.GetButtonDown("Jump")){
+					jumpComponnent = jumpSpeed;
+					doubleJump=false;
+				}
 				else
 					jumpComponnent = 0.0f;
 		       
