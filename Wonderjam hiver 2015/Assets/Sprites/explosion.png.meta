@@ -20,6 +20,7 @@ TextureImporter:
     21300030: explosion-2
     21300032: explosion-1
     21300034: explosion-0
+    21300036: explosion-14
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -64,10 +65,10 @@ TextureImporter:
     - name: explosion-13
       rect:
         serializedVersion: 2
-        x: 2242
-        y: 1434
+        x: 2245
+        y: 1475
         width: 367
-        height: 525
+        height: 481
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -75,19 +76,19 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1828
-        y: 1434
+        y: 1475
         width: 390
-        height: 525
+        height: 447
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: explosion-11
       rect:
         serializedVersion: 2
-        x: 1353
-        y: 1434
+        x: 1350
+        y: 1478
         width: 443
-        height: 525
+        height: 447
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -95,9 +96,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 869
-        y: 1434
+        y: 1475
         width: 411
-        height: 525
+        height: 423
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -105,9 +106,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 516
-        y: 1434
+        y: 1470
         width: 303
-        height: 525
+        height: 368
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,9 +116,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 55
-        y: 1434
+        y: 1450
         width: 381
-        height: 525
+        height: 368
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -198,6 +199,16 @@ TextureImporter:
         y: 2098
         width: 265
         height: 370
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: explosion-14
+      rect:
+        serializedVersion: 2
+        x: 2678
+        y: 1431
+        width: 317
+        height: 525
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}

@@ -121,7 +121,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1000
-  maxSpeed: 25
   jumpSpeed: 32
   jumpable: 0
   minJump: 2
@@ -131,6 +130,8 @@ MonoBehaviour:
   layerNumber: 11
   hardPush: {x: -500, y: 100}
   softPush: {x: -25, y: 5}
+  curseTime: 0
+  playerReady: 1
 --- !u!212 &21291082
 SpriteRenderer:
   m_ObjectHideFlags: 1
