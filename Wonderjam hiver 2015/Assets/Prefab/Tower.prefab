@@ -15,7 +15,7 @@ GameObject:
   - 114: {fileID: 11442318}
   m_Layer: 0
   m_Name: Tower
-  m_TagString: Untagged
+  m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44,7 +44,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 143472}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 13.8000002, y: 6.5, z: 0}
+  m_LocalPosition: {x: 17.3999996, y: .800000012, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 1}
   m_Children:
   - {fileID: 463302}
@@ -86,7 +86,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Radius: 5
+  m_Radius: 2
   m_Center: {x: 0, y: 0}
 --- !u!114 &11401106
 MonoBehaviour:
@@ -112,6 +112,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ready: 0
+  gamecontroller: {fileID: 0}
+  me: {fileID: 0}
+  zeList: {fileID: 0}
 --- !u!114 &11499886
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -124,7 +127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerDetected: 0
-  Firerate: 5
+  Firerate: 2.5
   Timer: 0
   boolet: {fileID: 192734, guid: d7dae68c09d4b364ab0d599e171feffd, type: 2}
   spawn: {fileID: 463302}

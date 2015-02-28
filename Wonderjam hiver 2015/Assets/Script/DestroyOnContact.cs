@@ -16,7 +16,7 @@ public class DestroyOnContact : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D other){
-		if (other.tag == "Player" || other.tag == "Platform") {
+		if (other.tag != "Tower") {
 			if(other.tag == "Player")
 				other.GetComponent<PlayerController>().pushHard();
 			Instantiate (explosion, this.transform.position, Quaternion.identity);

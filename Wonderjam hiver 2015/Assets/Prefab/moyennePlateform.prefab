@@ -80,9 +80,10 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 476808}
+  - 61: {fileID: 6197264}
   m_Layer: 0
   m_Name: moyennePlateform
-  m_TagString: Untagged
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -214,7 +215,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 176808}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 68.8251801, y: -6.60168695, z: -2.5625}
+  m_LocalPosition: {x: 4.66978693, y: -12.2559509, z: -2.5625}
   m_LocalScale: {x: .5, y: .5, z: 1}
   m_Children:
   - {fileID: 476816}
@@ -483,6 +484,17 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_Size: {x: .383122087, y: .323764712}
   m_Center: {x: .000275688159, y: .00200799946}
+--- !u!61 &6197264
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 176808}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Size: {x: 61.2122726, y: 9.32766724}
+  m_Center: {x: -12.644577, y: -.300449371}
 --- !u!212 &21276800
 SpriteRenderer:
   m_ObjectHideFlags: 1
