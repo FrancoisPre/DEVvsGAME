@@ -27,7 +27,7 @@ public class EnemyController : MonoBehaviour {
 
 	void onTriggerEnter2D(Collider2D other){
 		if (other.tag=="Player"){
-			other.GetComponent<PlayerController>().pushSoft();
+			other.GetComponent<PlayerController>().pushSoft(rigidbody2D.velocity);
 		}
 	}
 
