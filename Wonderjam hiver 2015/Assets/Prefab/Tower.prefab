@@ -13,6 +13,7 @@ GameObject:
   - 61: {fileID: 6143472}
   - 58: {fileID: 5835738}
   - 114: {fileID: 11499886}
+  - 114: {fileID: 11442318}
   m_Layer: 0
   m_Name: Tower
   m_TagString: Untagged
@@ -98,6 +99,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_Size: {x: .159999996, y: .159999996}
   m_Center: {x: 0, y: 0}
+--- !u!114 &11442318
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 143472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec5865acb7299c441ae220d7f62aa0cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ready: 0
 --- !u!114 &11499886
 MonoBehaviour:
   m_ObjectHideFlags: 1

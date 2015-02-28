@@ -11,6 +11,7 @@ GameObject:
   - 212: {fileID: 21200070}
   - 58: {fileID: 5800070}
   - 114: {fileID: 11400070}
+  - 114: {fileID: 11435840}
   m_Layer: 0
   m_Name: Totem
   m_TagString: Untagged
@@ -52,6 +53,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f569a5fb9cd81f40afc23fe3b4b1161, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &11435840
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec5865acb7299c441ae220d7f62aa0cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ready: 0
 --- !u!212 &21200070
 SpriteRenderer:
   m_ObjectHideFlags: 1
