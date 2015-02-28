@@ -1,3 +1,14 @@
+*.csproj
+*.pidb
+*.sln
+*.userprefs
+*.unityproj
+*.suo
+/Library/
+/Temp/
+/Assets/ShaderForge/
+/Assets/ShaderForge.meta
+
 # =============== #
 # Unity generated #
 # =============== #
