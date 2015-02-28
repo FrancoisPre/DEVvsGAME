@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour {
 	public Vector2 hardPush;
 	public Vector2 softPush;
 	public float curseTime;
+	private bool doubleJump=false;
 
 	//Variables d'initialisation (Mode tower -> Mode platformer)
 	public bool playerReady;
@@ -61,7 +62,7 @@ public class PlayerController : MonoBehaviour {
 			Vector2 offset = rayCastPosition - rigidbody2D.position;
 			hit = Physics2D.Raycast(rigidbody2D.position,offset.normalized,offset.sqrMagnitude,layermask);
 			float tmp = hit.distance;
-			Debug.Log(tmp);
+			//Debug.Log(tmp);
 			if (tmp!=0 && tmp<mindistjump)
 				jumpable=true;
 			else
@@ -73,8 +74,14 @@ public class PlayerController : MonoBehaviour {
 					invertCmd = false;
 				else
 					movement = -movement;
-				if (Input.GetButtonDown ("Jump") && jumpable)
+				if (Input.GetButtonDown ("Jump") && jumpable){
 					jumpComponnent = jumpSpeed;
+					doubleJump=true;
+				}
+				else if (doubleJump&&Input.GetButtonDown("Jump")){
+					jumpComponnent = jumpSpeed;
+					doubleJump=false;
+				}
 				else
 					jumpComponnent = 0.0f;
 		       

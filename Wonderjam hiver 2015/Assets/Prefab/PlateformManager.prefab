@@ -1,14 +1,67 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &170600
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 470600}
+  - 114: {fileID: 11470600}
+  m_Layer: 0
+  m_Name: PlateformManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &470600
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 170600}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -.201373845, y: -3.36492276, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!114 &11470600
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 170600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f38f2430342d4d499e486db327da154, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  petit: {fileID: 493136, guid: d6f85ddb222fb8043ada1bb478617361, type: 2}
+  moyen: {fileID: 476808, guid: 09c94ad0f40b7dd40ac9dc459bab890f, type: 2}
+  grand: {fileID: 486628, guid: 44c775ae865b3214ba29cfb1d386248d, type: 2}
+  numberOfObjects: 8
+  minGap: 15
+  maxGap: 40
+  minY: -10
+  maxY: 7
+  startPosition: {x: 5, y: -30, z: 0}
+  basicPlatform: {fileID: 451666, guid: dfe4dd476082d0441b3c288fef9509dd, type: 2}
+  nbElemPetit: 4
+  nbElemMoyen: 8
+  nbElemGrand: 16
+  exit: {fileID: 402142, guid: 873273e3c5de52346b3ba39c871d9707, type: 2}
 --- !u!1001 &100100000
 Prefab:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 0}
+  m_RootGameObject: {fileID: 170600}
   m_IsPrefabParent: 1
   m_IsExploded: 1
