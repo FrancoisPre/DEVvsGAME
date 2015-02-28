@@ -39,5 +39,6 @@ public class TowerController : MonoBehaviour {
 	void ShootToKill(){
 		Instantiate (boolet, spawn.position, spawn.rotation);
 		Timer = 0.0f;
+		audio.Play();
 	}
 }

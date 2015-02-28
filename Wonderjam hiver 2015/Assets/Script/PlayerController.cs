@@ -74,11 +74,13 @@ public class PlayerController : MonoBehaviour {
 					movement = -movement;
 				if (Input.GetButtonDown ("Jump") && jumpable){
 					jumpComponnent = jumpSpeed;
+					audio.Play();
 					doubleJump=true;
 				}
 				else if (doubleJump&&Input.GetButtonDown("Jump")){
 					jumpComponnent = jumpSpeed;
 					doubleJump=false;
+					audio.Play();
 				}
 				else
 					jumpComponnent = 0.0f;
