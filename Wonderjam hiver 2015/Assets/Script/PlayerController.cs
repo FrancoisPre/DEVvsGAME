@@ -50,24 +50,25 @@ public class PlayerController : MonoBehaviour {
 
 	// Update is called once per frame
 	void FixedUpdate () {
-		if (playerReady) {
-			if (rigidbody2D.position.y < (-100)) {
-				rigidbody2D.position = new Vector3 (0.0f, 0.0f, 0.0f);
-				rigidbody2D.velocity = new Vector2 (0.0f, 0.0f);
-			} else {
-				RaycastHit2D hit;
-				Vector2 rayCastPosition = new Vector2 (rigidbody2D.position.x, rigidbody2D.position.y - 1);
-				Vector2 offset = rayCastPosition - rigidbody2D.position;
-				hit = Physics2D.Raycast (rigidbody2D.position, offset.normalized, offset.sqrMagnitude, layermask);
-				float tmp = hit.distance;
-				Debug.Log (tmp);
-				if (tmp != 0 && tmp < mindistjump)
-					jumpable = true;
-				else
-					jumpable = false;
-				movement = Input.GetAxis ("Horizontal");
-				deplacement = rigidbody2D.velocity;
-				if (invertCmd)
+		if (rigidbody2D.position.y<(-100)){
+			rigidbody2D.position = new Vector3(5.0f,0.0f,0.0f);
+			rigidbody2D.velocity = new Vector2(0.0f,0.0f);
+			rigidbody2D.rotation = 0.0f;
+		}
+		else{
+			RaycastHit2D hit;
+			Vector2 rayCastPosition = new Vector2(rigidbody2D.position.x,rigidbody2D.position.y-1);
+			Vector2 offset = rayCastPosition - rigidbody2D.position;
+			hit = Physics2D.Raycast(rigidbody2D.position,offset.normalized,offset.sqrMagnitude,layermask);
+			float tmp = hit.distance;
+			Debug.Log(tmp);
+			if (tmp!=0 && tmp<mindistjump)
+				jumpable=true;
+			else
+				jumpable=false;
+	        movement = Input.GetAxis("Horizontal");
+	        deplacement = rigidbody2D.velocity;
+	   		if (invertCmd)
 				if (debCurse + curseTime < Time.time)
 					invertCmd = false;
 				else
@@ -81,4 +82,4 @@ public class PlayerController : MonoBehaviour {
 			}
 		}
 	}
-}
+
