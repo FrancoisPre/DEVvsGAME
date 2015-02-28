@@ -61,7 +61,7 @@ public class PlayerController : MonoBehaviour {
 			Vector2 offset = rayCastPosition - rigidbody2D.position;
 			hit = Physics2D.Raycast(rigidbody2D.position,offset.normalized,offset.sqrMagnitude,layermask);
 			float tmp = hit.distance;
-			Debug.Log(tmp);
+			//Debug.Log(tmp);
 			if (tmp!=0 && tmp<mindistjump)
 				jumpable=true;
 			else
