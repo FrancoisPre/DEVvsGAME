@@ -105,13 +105,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 143472}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f85b1a60be327204da062afaf54a4941, type: 3}
+  m_Script: {fileID: 11500000, guid: e0ee84db7450e484ea9ee7343d403a66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerDetected: 0
   Firerate: 0
   Timer: 0
-  boolet: {fileID: 192734, guid: 2042754e317db1e458d3a9dc8ef42903, type: 2}
+  boolet: {fileID: 192734, guid: d7dae68c09d4b364ab0d599e171feffd, type: 2}
   spawn: {fileID: 463302}
 --- !u!212 &21243472
 SpriteRenderer:

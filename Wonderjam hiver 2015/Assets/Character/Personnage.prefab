@@ -77,12 +77,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 191082}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a28a1dbe41b47c47ac2ec375f035b2d, type: 3}
+  m_Script: {fileID: 11500000, guid: 0497cb926d7eafa4e96af001318e550e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
-  maxSpeed: 0
-  jumpSpeed: 0
+  speed: 1000
+  maxSpeed: 25
+  jumpSpeed: 100
   jumpable: 0
   minJump: 0
   invertCmd: 0
