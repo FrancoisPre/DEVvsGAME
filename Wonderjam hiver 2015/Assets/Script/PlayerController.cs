@@ -31,7 +31,7 @@ public class PlayerController : MonoBehaviour {
 		else{
 	        movement = Input.GetAxis("Horizontal");
 	        deplacement = rigidbody2D.velocity;
-	        if (deplacement.y < minJump)
+	        if (Mathf.Abs(deplacement.y) < minJump)
 	            jumpable = true;
 	        else
 	            jumpable = false;
