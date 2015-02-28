@@ -51,8 +51,9 @@
      <Compile Include="Assets\Script\EnemyController.cs" />
      <Compile Include="Assets\Script\Fear.cs" />
      <Compile Include="Assets\Script\GameController.cs" />
-     <Compile Include="Assets\Script\Movingtower.cs" />
      <Compile Include="Assets\Script\PlayerController.cs" />
+     <Compile Include="Assets\Script\Second Player\ChangeReady.cs" />
+     <Compile Include="Assets\Script\Second Player\Movingtower.cs" />
      <Compile Include="Assets\Script\TowerController.cs" />
      <None Include="Assets\Character\mettre ici les character.txt" />
      <None Include="Assets\Audio\mettre ici l audio.txt" />
