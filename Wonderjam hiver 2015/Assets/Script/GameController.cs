@@ -20,6 +20,7 @@ public class GameController : MonoBehaviour {
 		win=true;
 		//play victory animation
 		//load next level
+		Application.LoadLevel(Application.loadedLevel);
 	}
 
 	void GameOver(){
