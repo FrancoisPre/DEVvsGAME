@@ -7,6 +7,7 @@ public class GameController : MonoBehaviour {
     private float timeOver;
     private bool gameOver = false;
 	private GameObject player;
+	private bool win;
 	// Use this for initialization
 	void Start () {
         timeOver = Time.time + timer;
@@ -16,13 +17,18 @@ public class GameController : MonoBehaviour {
 		player=_player;
 	}
 
+	public void Win(){
+		win=true;
+	}
+
 	// Update is called once per frame
 	void Update () {
-        if (Time.time > timeOver) {
+        if (Time.time > timeOver&&!gameOver) {
             gameOver = true;
+			GameObject.FindWithTag("Exit").GetComponent<GoalControl>().close();
         }
 		if (player!=null){
-			Camera.main.transform.position = new Vector3(player.transform.position.x + 15.0f,player.transform.position.y + 5.0f,Camera.main.transform.position.z);
+			Camera.main.transform.position = new Vector3(player.transform.position.x ,player.transform.position.y ,Camera.main.transform.position.z);
 		}
 	}
 }
