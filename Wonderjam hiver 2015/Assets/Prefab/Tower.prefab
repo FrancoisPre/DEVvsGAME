@@ -30,6 +30,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 463302}
   - 212: {fileID: 21234098}
+  - 114: {fileID: 11401106}
   m_Layer: 0
   m_Name: spawn
   m_TagString: Untagged
@@ -86,7 +87,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Radius: .5
+  m_Radius: 5
   m_Center: {x: 0, y: 0}
 --- !u!61 &6143472
 BoxCollider2D:
@@ -99,6 +100,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_Size: {x: .159999996, y: .159999996}
   m_Center: {x: 0, y: 0}
+--- !u!114 &11401106
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 163302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8195a36f441a7141a58524cd78d3a0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerposition: {fileID: 0}
 --- !u!114 &11442318
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -127,6 +140,7 @@ MonoBehaviour:
   Timer: 0
   boolet: {fileID: 192734, guid: d7dae68c09d4b364ab0d599e171feffd, type: 2}
   spawn: {fileID: 463302}
+  playerposition: {fileID: 0}
 --- !u!212 &21234098
 SpriteRenderer:
   m_ObjectHideFlags: 1
