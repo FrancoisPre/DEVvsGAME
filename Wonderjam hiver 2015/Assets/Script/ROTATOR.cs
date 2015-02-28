@@ -14,6 +14,6 @@ public class ROTATOR : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		transform.rotation = Quaternion.LookRotation(Vector3.forward, (transform.position - playerposition.position + transform.rotation));
+		transform.rotation = Quaternion.LookRotation(Vector3.forward, (transform.position - playerposition.position));
 	}
 }
