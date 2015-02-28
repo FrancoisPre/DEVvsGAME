@@ -21,6 +21,10 @@ public class GameController : MonoBehaviour {
 		audio.Play();
 		//play victory animation
 		//load next level
+		Invoke ("restart",5);
+		Application.LoadLevel(Application.loadedLevel);
+	}
+	void restart(){
 		Application.LoadLevel(Application.loadedLevel);
 	}
 

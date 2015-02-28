@@ -37,12 +37,12 @@ public class PlayerController : MonoBehaviour {
 
 	public void pushHard(Vector3 direction){
 		Vector3 d = direction.normalized;
-		rigidbody2D.AddRelativeForce(d*hardPush);
+		rigidbody2D.AddForce(d*hardPush);
 	}
 
 	public void pushSoft(Vector3 direction){
 		Vector3 d = direction.normalized;
-		rigidbody2D.AddRelativeForce(d*softPush);
+		rigidbody2D.AddForce(d*softPush);
 	}
 
 	public void changeReady() {
