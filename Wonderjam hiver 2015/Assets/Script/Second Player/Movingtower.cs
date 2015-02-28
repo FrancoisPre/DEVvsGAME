@@ -5,14 +5,18 @@ using System.Collections;
 
 public class Movingtower : MonoBehaviour {
 	public bool ready;
-	public GameObject gamecontroller;
 	public GameObject me;
 	public Button readyButton;
 	public TowerMasterList zeList;
 
+	private GameController GameController {
+		get { return GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();}
+	}
+
+
 	void Start () {
 		ready = false;
-		zeList = gamecontroller.GetComponent<TowerMasterList>();
+		zeList = GameController.GetComponent<TowerMasterList>();
 		zeList.addMasterList(me);
 	}
 
@@ -34,6 +38,8 @@ public class Movingtower : MonoBehaviour {
 	}
 
 	public void changeReady () { 
+		zeList = GameController.GetComponent<TowerMasterList>();
+		Debug.Log (zeList);
 		if (zeList.checkMasterList() || ready)
 		{
 			ready = !ready; 

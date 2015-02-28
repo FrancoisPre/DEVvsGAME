@@ -21,6 +21,7 @@ public class GameController : MonoBehaviour {
 		audio.Play();
 		//play victory animation
 		//load next level
+		Application.LoadLevel(Application.loadedLevel);
 	}
 
 	void GameOver(){

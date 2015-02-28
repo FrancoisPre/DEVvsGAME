@@ -31,12 +31,10 @@ public class TowerMasterList : MonoBehaviour {
 
 			if (testatt.ready)
 			{
-				Debug.Log ("La tour #" + i + " est ready, on renvoie false");
+				//Debug.Log ("La tour #" + i + " est ready, on renvoie false");
 				return false;
 			}
-			else
-				Debug.Log ("La tour #" + i + " est pas ready");
-			Debug.Log ("TestBoucle");
+				//Debug.Log ("La tour #" + i + " est pas ready");
 		}
 
 		return true;
