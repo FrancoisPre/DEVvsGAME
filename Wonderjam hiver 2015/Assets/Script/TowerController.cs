@@ -13,7 +13,7 @@ public class TowerController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		PlayerDetected = false;
-		Firerate = 2.5f;
+		Firerate = .5f;
 
 	}
 	

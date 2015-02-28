@@ -14,6 +14,7 @@ GameObject:
   - 114: {fileID: 11499886}
   - 114: {fileID: 11442318}
   - 82: {fileID: 8221600}
+  - 61: {fileID: 6149662}
   m_Layer: 0
   m_Name: Tower
   m_TagString: Tower
@@ -72,9 +73,9 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
-  m_GravityScale: 1
+  m_GravityScale: 3
   m_FixedAngle: 0
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -89,6 +90,17 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_Radius: 2
   m_Center: {x: 0, y: 0}
+--- !u!61 &6149662
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 143472}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Size: {x: .424517989, y: .0235645305}
+  m_Center: {x: -.0335525498, y: -.405682594}
 --- !u!82 &8221600
 AudioSource:
   m_ObjectHideFlags: 1
@@ -171,7 +183,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ready: 0
-  gamecontroller: {fileID: 0}
   me: {fileID: 0}
   readyButton: {fileID: 0}
   zeList: {fileID: 0}
