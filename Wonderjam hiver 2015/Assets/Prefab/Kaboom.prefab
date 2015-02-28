@@ -9,6 +9,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 420412}
   - 212: {fileID: 21220412}
+  - 114: {fileID: 11447894}
   m_Layer: 0
   m_Name: Kaboom
   m_TagString: Untagged
@@ -43,6 +44,18 @@ Animator:
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11447894
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 120412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5d3f080c1bca8040ad1e1c672e192fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: 2
 --- !u!212 &21220412
 SpriteRenderer:
   m_ObjectHideFlags: 1

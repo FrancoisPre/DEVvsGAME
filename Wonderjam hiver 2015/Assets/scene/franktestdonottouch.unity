@@ -318,6 +318,61 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: d7f5c0affb48c01469f678be52f23d40, type: 3}
   m_Color: {r: .984313726, g: .984313726, b: .984313726, a: 1}
+--- !u!1 &380986598
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 186838, guid: 7a60bbf9b65ae614d9eca57f8175df33, type: 2}
+  m_PrefabInternal: {fileID: 2001827522}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 380986601}
+  - 114: {fileID: 380986600}
+  - 114: {fileID: 380986599}
+  m_Layer: 0
+  m_Name: GameController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &380986599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11486838, guid: 7a60bbf9b65ae614d9eca57f8175df33,
+    type: 2}
+  m_PrefabInternal: {fileID: 2001827522}
+  m_GameObject: {fileID: 380986598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbc4fab128fcfa74fa7c27760e5b1385, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countdown: {fileID: 11486824, guid: 74484ed28f592e64e883061d952a722f, type: 2}
+--- !u!114 &380986600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11486840, guid: 7a60bbf9b65ae614d9eca57f8175df33,
+    type: 2}
+  m_PrefabInternal: {fileID: 2001827522}
+  m_GameObject: {fileID: 380986598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c724982d43c12804da8634edd17fe3b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: 15
+--- !u!4 &380986601
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 486838, guid: 7a60bbf9b65ae614d9eca57f8175df33, type: 2}
+  m_PrefabInternal: {fileID: 2001827522}
+  m_GameObject: {fileID: 380986598}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 26.7716999, y: 1.0312711, z: -2.5625}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
 --- !u!1001 &530768124
 Prefab:
   m_ObjectHideFlags: 0
@@ -822,47 +877,6 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: d7f5c0affb48c01469f678be52f23d40, type: 3}
   m_Color: {r: .984313726, g: .984313726, b: .984313726, a: 1}
---- !u!1 &956234499
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 126054, guid: 7a60bbf9b65ae614d9eca57f8175df33, type: 2}
-  m_PrefabInternal: {fileID: 2001827522}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 956234501}
-  - 114: {fileID: 956234500}
-  m_Layer: 0
-  m_Name: GameController
-  m_TagString: GameController
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &956234500
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11426054, guid: 7a60bbf9b65ae614d9eca57f8175df33,
-    type: 2}
-  m_PrefabInternal: {fileID: 2001827522}
-  m_GameObject: {fileID: 956234499}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c724982d43c12804da8634edd17fe3b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timer: 15
---- !u!4 &956234501
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 426054, guid: 7a60bbf9b65ae614d9eca57f8175df33, type: 2}
-  m_PrefabInternal: {fileID: 2001827522}
-  m_GameObject: {fileID: 956234499}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 13.9329376, y: 33.4733353, z: -2.59026527}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
 --- !u!1 &1029389558
 GameObject:
   m_ObjectHideFlags: 0
@@ -1789,6 +1803,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ready: 0
+  gamecontroller: {fileID: 0}
+  me: {fileID: 0}
+  zeList: {fileID: 0}
 --- !u!1 &1650789983
 GameObject:
   m_ObjectHideFlags: 0
@@ -2057,6 +2074,6 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7a60bbf9b65ae614d9eca57f8175df33, type: 2}
-  m_RootGameObject: {fileID: 956234499}
+  m_RootGameObject: {fileID: 380986598}
   m_IsPrefabParent: 0
   m_IsExploded: 1
