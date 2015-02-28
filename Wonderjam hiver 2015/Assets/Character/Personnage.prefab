@@ -1,5 +1,21 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &107866
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 407866}
+  - 61: {fileID: 6107866}
+  m_Layer: 0
+  m_Name: EnemyDetector
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &191082
 GameObject:
   m_ObjectHideFlags: 0
@@ -20,6 +36,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!4 &407866
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 107866}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: .0900000036, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 491082}
+  m_RootOrder: 0
 --- !u!4 &491082
 Transform:
   m_ObjectHideFlags: 1
@@ -27,9 +55,10 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 191082}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 5.69999981, y: .400000006, z: 0}
   m_LocalScale: {x: 6.77069283, y: 9.8585186, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 407866}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!50 &5091082
@@ -47,6 +76,17 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
+--- !u!61 &6107866
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 107866}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Size: {x: .0418882892, y: .120134972}
+  m_Center: {x: 0, y: 0}
 --- !u!61 &6168872
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -82,13 +122,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1000
   maxSpeed: 25
-  jumpSpeed: 150
+  jumpSpeed: 32
   jumpable: 0
-  minJump: 0
+  minJump: 2
   invertCmd: 0
   debCurse: 0
   mindistjump: 5
   layerNumber: 11
+  hardPush: {x: -50, y: 10}
+  softPush: {x: -25, y: 5}
 --- !u!212 &21291082
 SpriteRenderer:
   m_ObjectHideFlags: 1

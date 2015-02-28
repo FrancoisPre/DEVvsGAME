@@ -15,6 +15,8 @@ public class PlayerController : MonoBehaviour {
 	public float mindistjump;
 	private int layermask;
 	public int layerNumber;
+	public Vector2 hardPush;
+	public Vector2 softPush;
 
 	// Use this for initialization
 	void Start () {
@@ -29,6 +31,14 @@ public class PlayerController : MonoBehaviour {
 		Gizmos.DrawLine(rigidbody2D.position, rigidbody2D.position  + new Vector2(0.0f,-mindistjump));
 	}
    
+
+	public void pushHard(){
+		rigidbody2D.AddRelativeForce(hardPush);
+	}
+
+	public void pushSoft(){
+		rigidbody2D.AddRelativeForce(softPush);
+	}
 
 	// Update is called once per frame
 	void FixedUpdate () {
