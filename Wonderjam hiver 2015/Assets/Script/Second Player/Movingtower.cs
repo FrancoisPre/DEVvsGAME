@@ -1,11 +1,13 @@
 ﻿
 using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class Movingtower : MonoBehaviour {
 	public bool ready;
 	public GameObject gamecontroller;
 	public GameObject me;
+	public Button readyButton;
 	public TowerMasterList zeList;
 
 	void Start () {
@@ -36,9 +38,9 @@ public class Movingtower : MonoBehaviour {
 		{
 			ready = !ready; 
 			if (ready)
-				Debug.Log ("This target is ready");
+				readyButton.GetComponent<Image> ().color = Color.red;
 			else
-				Debug.Log ("This target is not longer ready");
+				readyButton.GetComponent<Image> ().color = Color.white;
 		} else
 			Debug.Log ("Il existe deja un element qui se deplace");
 	}
