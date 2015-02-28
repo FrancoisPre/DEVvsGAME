@@ -8,7 +8,7 @@ public class TowerMasterList : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		towers [1] = test;
+		//towers [1] = test;
 	}
 	
 	// Update is called once per frame
