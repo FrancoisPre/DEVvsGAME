@@ -12,7 +12,7 @@ public class EnemyController : MonoBehaviour {
 	
 	
 	private int finalMask;
-	
+	 
 	
 	// Use this for initialization
 	void Start () {
@@ -74,13 +74,13 @@ public class EnemyController : MonoBehaviour {
 
 		if (rigidbody2D.velocity.x < 0 && (int) rigidbody2D.velocity.y==0) {
 			Vector2  leftHorizontalCastPosition = new Vector2 (rigidbody2D.position.x - horizontalCastSide, rigidbody2D.position.y);
-			Debug.Log (leftHorizontalCastPosition);
+			//Debug.Log (leftHorizontalCastPosition);
 			Vector2 leftHorizontalOffset = leftHorizontalCastPosition - rigidbody2D.position;
-			Debug.Log (leftHorizontalOffset);
+			//Debug.Log (leftHorizontalOffset);
 			hitHorizontalLeft = Physics2D.Raycast (rigidbody2D.position, leftHorizontalOffset.normalized, leftHorizontalOffset.sqrMagnitude, finalMask);
 
 			if (hitHorizontalLeft.collider != null) {
-				Debug.Log("TAPPE PLATEFORME A L' HORIZONTALE VERS GAUCHE");
+				//Debug.Log("TAPPE PLATEFORME A L' HORIZONTALE VERS GAUCHE");
 				rigidbody2D.velocity = rigidbody2D.velocity * (-1.0f);
 			}
 		} 
@@ -89,13 +89,13 @@ public class EnemyController : MonoBehaviour {
 		else if(rigidbody2D.velocity.x>=0 &&(int)rigidbody2D.velocity.y==0)
 		{
 			Vector2  rightHorizontalCast = new Vector2 (rigidbody2D.position.x + horizontalCastSide, rigidbody2D.position.y);
-			Debug.Log (rightHorizontalCast);
+			//Debug.Log (rightHorizontalCast);
 			Vector2 rightHorizontalOffset = rightHorizontalCast - rigidbody2D.position;
-			Debug.Log (rightHorizontalOffset);
+			//Debug.Log (rightHorizontalOffset);
 			hitHorizontalRight = Physics2D.Raycast (rigidbody2D.position, rightHorizontalOffset.normalized, rightHorizontalOffset.sqrMagnitude, finalMask);
 
 			if (hitHorizontalRight.collider != null) {
-				Debug.Log("TAPPE PLATEFORME A L' HORIZONTALE VERS DROTIE");
+				//Debug.Log("TAPPE PLATEFORME A L' HORIZONTALE VERS DROTIE");
 				rigidbody2D.velocity = rigidbody2D.velocity * (-1.0f);
 			}
 		}
@@ -104,12 +104,12 @@ public class EnemyController : MonoBehaviour {
 
 		// SI LE RAYCAST GAUCHE N'ENTRE PAS EN COLLISION AVEC UNE PLATEFORME
 		if ((hitLeft.collider == null) ) {
-			Debug.Log ("rien a gauche");
+			//Debug.Log ("rien a gauche");
 			rigidbody2D.velocity = rigidbody2D.velocity * (-1.0f);
 		}
 		// SI LE RAYCAST DROITE N'ENTRE PAS EN COLLISION AVEC UNE PLATEFORME
 		if ((hitRight.collider == null)) {
-			Debug.Log ("rien a droite");
+			//Debug.Log ("rien a droite");
 			rigidbody2D.velocity = rigidbody2D.velocity * (-1.0f);
 		}
 		if (hitRight.collider == null && hitLeft.collider == null) {
