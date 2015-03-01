@@ -7,13 +7,18 @@ public class TimerGUI : MonoBehaviour {
 	public Text countdown;
 	private int countdownTimer;
 	private bool count=false;
+	private GameController gameController;
 
 
 
 	// Use this for initialization
 	void Start () {
-		GameController gameController = GetComponent<GameController> ();
+		gameController = GetComponent<GameController> ();
+	}
+
+	public void initTimer(){
 		countdownTimer = (int) (gameController.timer* 100.0f);
+
 	}
 	
 	// Update is called once per frame

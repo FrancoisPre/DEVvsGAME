@@ -47,9 +47,9 @@ GameObject:
   - 61: {fileID: 6185254}
   - 82: {fileID: 8285254}
   - 50: {fileID: 5096762}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Totem 2.0
-  m_TagString: Untagged
+  m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
