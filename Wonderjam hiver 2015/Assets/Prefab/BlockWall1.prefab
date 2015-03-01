@@ -28,9 +28,9 @@ GameObject:
   - 61: {fileID: 6160842}
   - 50: {fileID: 5060842}
   - 114: {fileID: 11460842}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: BlockWall1
-  m_TagString: Untagged
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
