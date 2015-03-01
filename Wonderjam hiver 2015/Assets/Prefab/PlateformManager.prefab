@@ -52,6 +52,7 @@ MonoBehaviour:
   nbElemMoyen: 8
   nbElemGrand: 16
   exit: {fileID: 402142, guid: 873273e3c5de52346b3ba39c871d9707, type: 2}
+  exitRenderer: {fileID: 432582, guid: 873273e3c5de52346b3ba39c871d9707, type: 2}
   correctif: 5
   minEspacement: 30
   basicPlatform: {fileID: 451666, guid: dfe4dd476082d0441b3c288fef9509dd, type: 2}
