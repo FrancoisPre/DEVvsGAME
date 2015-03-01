@@ -197,28 +197,29 @@ public class EnemyController : MonoBehaviour {
 		}
 		if (hitRight.collider == null && hitLeft.collider == null) {
 			rigidbody2D.velocity = new Vector2 (0, -1) * speed;
-			isSnap=false;
+			isSnap = false;
 
-		} else if(!isSnap){
-			isSnap =true;
+		} else if (!isSnap) {
+			isSnap = true;
 			if (Random.value > 0.5f) {
 				velocity = speed * new Vector2 (1, 0);
-				goingRight=true;
-				goingLeft=false;
+				goingRight = true;
+				goingLeft = false;
 			} else {
-				goingRight=false;
-				goingLeft=true;
-				velocity = speed * new Vector2 (-1,0);
+				goingRight = false;
+				goingLeft = true;
+				velocity = speed * new Vector2 (-1, 0);
 			}
-			if(goingRight){
-				velocity = speed * new Vector2 (1,0);
-			}
-			else{
-				velocity = speed * new Vector2 (-1,0);
+
+		} else {
+			if (goingRight) {
+				velocity = speed * new Vector2 (1, 0);
+			} else {
+				velocity = speed * new Vector2 (-1, 0);
 			}
 			rigidbody2D.velocity = velocity;
-
 		}
+
 
 
 		/*
