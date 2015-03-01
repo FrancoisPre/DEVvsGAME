@@ -16,6 +16,9 @@ public class Fear : MonoBehaviour
 
 				fuckthatscript = true;
 				audio.Play ();
+
+				//Destroy
+				Invoke ("suicide", 3.0f);
 			}
 		}
 	}
@@ -27,5 +30,9 @@ public class Fear : MonoBehaviour
 			player.debCurse = Time.time;
 		}
 	}*/
+
+	void suicide() {
+		Destroy (gameObject);
+	}
 }
 
