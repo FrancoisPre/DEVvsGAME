@@ -16,26 +16,31 @@ public class TimerGUI : MonoBehaviour {
 		gameController = GetComponent<GameController> ();
 	}
 
-	public void initTimer(){
-		countdownTimer = (int) (gameController.timer* 100.0f);
+	public void initTimer(int timer){
+		countdownTimer = timer*100;
 
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
 		if (count){
-			countdownTimer -=  (int) ((Time.deltaTime)*100.0f);
+			countdownTimer =  gameController.getTimer()*100;
 			if (countdownTimer < 0) {
 				countdownTimer=0;
+				countdown.text = "Game Over";
 			}
-			//Debug.Log (countdownTimer);
-			int minutes = countdownTimer / (60 * 100);
-			int secondes = (countdownTimer % (60 * 100)) / 100;
-			int centaines = countdownTimer % 100;
-			countdown.text = minutes + ":" + secondes + ":" + centaines;
+			else {
+				//Debug.Log (countdownTimer);
+				int minutes = countdownTimer / (60 * 100);
+				int secondes = (countdownTimer % (60 * 100)) / 100;
+				int centaines = countdownTimer % 100;
+				countdown.text = minutes + ":" + secondes + ":" + Random.Range(0,1000);
+			}
 		}
 	}
 	public void beginCountdown(){
 		count = true;
+		Debug.Log ("Let's Begin Biatch");
+		Debug.Log (countdownTimer);
 	}
 }
