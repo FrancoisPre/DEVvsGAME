@@ -16,9 +16,10 @@ public class Fear : MonoBehaviour
 
 				fuckthatscript = true;
 				audio.Play ();
-
+				GameObject mustDie = transform.GetChild(1).gameObject;
+				DestroyObject(mustDie);
 				//Destroy
-				Invoke ("suicide", 3.0f);
+				//Invoke ("suicide", 3.0f);
 			}
 		}
 	}
