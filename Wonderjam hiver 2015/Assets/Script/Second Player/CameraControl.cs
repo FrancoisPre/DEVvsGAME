@@ -4,11 +4,11 @@ using System.Collections;
 public class CameraControl : MonoBehaviour {
 
 	public GameController gc;
-	float speed = 25.0f;
-	float cameraDistanceMax = 20f;
-	float cameraDistanceMin = 5f;
-	float cameraDistance = 10f;
-	float scrollSpeed = 9f;
+	public float speed = 25.0f;
+	public float cameraDistanceMax = 20f;
+	public float cameraDistanceMin = 5f;
+	public float cameraDistance = 10f;
+	public float scrollSpeed = 9f;
 	// Use this for initialization
 	void Start () {
 

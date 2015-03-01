@@ -20,7 +20,10 @@ public class PlatformManager : MonoBehaviour {
 	void Start () {
 		nextPosition1= startPosition;
 		for (int i =0; i < numberOfObjects; i++)
+		{
+			nextPosition1.z=0;
 			spawnPlateform();
+		}
 		spawnExit();
 	}
 	
@@ -58,10 +61,11 @@ public class PlatformManager : MonoBehaviour {
 			exitPosition = nextPosition1;
 			previousPosition = nextPosition1;
 			nextPosition1= nextPosition1 + new Vector3(Random.Range(minGap,maxGap) + size1,Random.Range(minY,maxY),0.0f);
-			while ((nextPosition1.x-previousPosition.x)<minEspacement){
-				nextPosition1 = nextPosition1 + new Vector3(Random.Range(minGap, minGap+minEspacement),0.0f,0.0f);			
+			if (previousPosition.z!=0){
+				while ((nextPosition1.x-previousPosition.x)<minEspacement){
+					nextPosition1 = nextPosition1 + new Vector3(Random.Range(minGap, minGap+minEspacement),0.0f,0.0f);			
+				}
 			}
-				
 		}
 	}
 }
