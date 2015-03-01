@@ -67,6 +67,10 @@ public class PlayerController : MonoBehaviour {
 			transform.localScale = noScale;
 		else
 			transform.localScale = scale;
+		if (rigidbody2D.velocity.y == 0.0)
+			anim.SetBool ("chute", false);
+		else
+			anim.SetBool ("chute", true);
 		if (rigidbody2D.position.y<(-100)){
 			rigidbody2D.position = new Vector3(5.0f,5.0f,0.0f);
 			rigidbody2D.velocity = new Vector2(0.0f,0.0f);
@@ -109,11 +113,14 @@ public class PlayerController : MonoBehaviour {
 
 			if (Input.GetButtonDown ("Jump") && jumpable){
 				jumpComponnent = jumpSpeed;
+				anim.SetTrigger("saute");
+				anim.SetBool("chute", true);
 				audio.Play();
 				//doubleJump=true;
 			}
 			else if (doubleJump&&Input.GetButtonDown("Jump")){
 				jumpComponnent = jumpSpeed;
+				anim.SetTrigger("resaute");
 				doubleJump=false;
 				audio.Play();
 			}
