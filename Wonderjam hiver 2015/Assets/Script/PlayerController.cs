@@ -3,7 +3,6 @@ using System.Collections;
 
 public class PlayerController : MonoBehaviour {
     private float movement;
-    private Vector2 deplacement;
     public float speed;
     public float jumpSpeed;
     public bool jumpable = false;
@@ -18,6 +17,7 @@ public class PlayerController : MonoBehaviour {
 	public float softPush;
 	public float curseTime;
 	private bool doubleJump=false;
+	public float maxSpeed;
 
 	//Variables d'initialisation (Mode tower -> Mode platformer)
 	public bool playerReady;
@@ -58,7 +58,7 @@ public class PlayerController : MonoBehaviour {
 		}
 		else{
 			RaycastHit2D hit;
-			Vector2 rayCastPosition = new Vector2(rigidbody2D.position.x,rigidbody2D.position.y-1);
+			Vector2 rayCastPosition = new Vector2(rigidbody2D.position.x,rigidbody2D.position.y-15);
 			Vector2 offset = rayCastPosition - rigidbody2D.position;
 			hit = Physics2D.Raycast(rigidbody2D.position,offset.normalized,offset.sqrMagnitude,layermask);
 			float tmp = hit.distance;
@@ -68,7 +68,6 @@ public class PlayerController : MonoBehaviour {
 			else
 				jumpable=false;
 	        movement = Input.GetAxis("Horizontal");
-	        deplacement = rigidbody2D.velocity;
 	   		if (invertCmd)
 				if (debCurse + curseTime < Time.time)
 					invertCmd = false;
@@ -88,6 +87,9 @@ public class PlayerController : MonoBehaviour {
 					jumpComponnent = 0.0f;
 		       
 				rigidbody2D.AddForce (Time.deltaTime * speed * new Vector2 (movement, jumpComponnent));
+				Vector2 vitesse = rigidbody2D.velocity;
+				vitesse.x =Mathf.Clamp(vitesse.x, -maxSpeed, maxSpeed);
+				rigidbody2D.velocity=vitesse;
 			}
 		}
 	}
