@@ -19,6 +19,10 @@ public class PlayerController : MonoBehaviour {
 	private bool doubleJump=false;
 	public float maxSpeed;
 	public float raycastlenght;
+	private Vector3 scale;
+	private Vector3 noScale;
+
+	Animator anim;
 
 	//Variables d'initialisation (Mode tower -> Mode platformer)
 	public bool playerReady;
@@ -28,6 +32,10 @@ public class PlayerController : MonoBehaviour {
 		layermask= (1<<layerNumber);
 		//playerReady = false;
 		playerReady = true;
+		anim = GetComponentInChildren<Animator> ();
+		scale = transform.localScale;
+		noScale = scale;
+		noScale.x = -1 * noScale.x;
 
 	}
 
@@ -55,6 +63,10 @@ public class PlayerController : MonoBehaviour {
 
 	// Update is called once per frame
 	void FixedUpdate () {
+		if (Input.GetAxis ("Horizontal") < 0)
+			transform.localScale = noScale;
+		else
+			transform.localScale = scale;
 		if (rigidbody2D.position.y<(-100)){
 			rigidbody2D.position = new Vector3(5.0f,5.0f,0.0f);
 			rigidbody2D.velocity = new Vector2(0.0f,0.0f);
@@ -86,6 +98,8 @@ public class PlayerController : MonoBehaviour {
 
 
 	        movement = Input.GetAxis("Horizontal");
+
+			anim.SetFloat("Speed", Mathf.Abs(Input.GetAxis("Horizontal")));
 			/*				if (curseTime >= )
 					invertCmd = false;
 				else
