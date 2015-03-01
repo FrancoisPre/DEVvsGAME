@@ -51,10 +51,16 @@ public class EnemyController : MonoBehaviour {
 	void FixedUpdate(){
 		RaycastHit2D hitLeft;
 		RaycastHit2D hitRight;
+
+
 		RaycastHit2D hitHorizontalLeft;
 		RaycastHit2D hitUpperHorizontalLeft;
+		RaycastHit2D hitHorizontalLowerLeft;
+
 		RaycastHit2D hitHorizontalRight;
 		RaycastHit2D hitUpperHorizontalRight;
+		RaycastHit2D hitLowerHorizontalRight;
+
 		
 		
 		
@@ -71,8 +77,52 @@ public class EnemyController : MonoBehaviour {
 		
 
 
-		//LES HORIZONTALES RAYCAST
 
+
+		//LES HORIZONTALES RAYCAST
+		//VERS GAUCHE INFÉRIERUR
+		Vector2  leftHorizontalLowerCastPosition = new Vector2 (rigidbody2D.position.x - horizontalCastSide, rigidbody2D.position.y-1.0f);
+		Vector2 leftHorizontalLowerOffset = leftHorizontalLowerCastPosition - new Vector2(rigidbody2D.position.x, rigidbody2D.position.y-1.0f);
+		hitHorizontalLowerLeft = Physics2D.Raycast (new Vector2(rigidbody2D.position.x, rigidbody2D.position.y-1.0f), leftHorizontalLowerOffset.normalized, leftHorizontalLowerOffset.sqrMagnitude, finalMask);
+
+		//VERS GAUCHE MILIEU
+		Vector2  leftHorizontalCastPosition = new Vector2 (rigidbody2D.position.x - horizontalCastSide, rigidbody2D.position.y);
+		Vector2 leftHorizontalOffset = leftHorizontalCastPosition - rigidbody2D.position;
+		hitHorizontalLeft = Physics2D.Raycast (rigidbody2D.position, leftHorizontalOffset.normalized, leftHorizontalOffset.sqrMagnitude, finalMask);
+		
+		//VERS GAUCHE SUPÉRIEUR
+
+		Vector2  leftUpperHorizontalCastPosition = new Vector2 (rigidbody2D.position.x - horizontalCastSide, rigidbody2D.position.y+1.0f);
+		Vector2 leftUpperHorizontalOffset = leftUpperHorizontalCastPosition - new Vector2(rigidbody2D.position.x, rigidbody2D.position.y+1.0f);
+		hitUpperHorizontalLeft = Physics2D.Raycast (new Vector2(rigidbody2D.position.x, rigidbody2D.position.y+1.0f), leftHorizontalOffset.normalized, leftHorizontalOffset.sqrMagnitude, finalMask);
+
+
+
+		//VERS DROITE INFÉRIEUR
+		Vector2  rightHorizontaLowerCastPosition = new Vector2 (rigidbody2D.position.x + horizontalCastSide, rigidbody2D.position.y-1.0f);
+		Vector2 rightHorizontaLowerlOffset = rightHorizontaLowerCastPosition - new Vector2(rigidbody2D.position.x, rigidbody2D.position.y-1.0f);
+		hitLowerHorizontalRight = Physics2D.Raycast (new Vector2(rigidbody2D.position.x, rigidbody2D.position.y-1.0f), rightHorizontaLowerlOffset.normalized, rightHorizontaLowerlOffset.sqrMagnitude, finalMask);
+
+		//VERS DROITE MILIEU
+		Vector2  rightHorizontalCast = new Vector2 (rigidbody2D.position.x + horizontalCastSide, rigidbody2D.position.y);
+		Vector2 rightHorizontalOffset = rightHorizontalCast - rigidbody2D.position;
+		hitHorizontalRight = Physics2D.Raycast (rigidbody2D.position, rightHorizontalOffset.normalized, rightHorizontalOffset.sqrMagnitude, finalMask);
+
+		//VERS DROITE SUPÉRIEUR
+		Vector2  rightUpperHorizontalCastPosition = new Vector2 (rigidbody2D.position.x + horizontalCastSide, rigidbody2D.position.y+1.0f);
+		Vector2 rightUpperHorizontalOffset = rightUpperHorizontalCastPosition - new Vector2(rigidbody2D.position.x, rigidbody2D.position.y+1.0f);
+		hitUpperHorizontalRight = Physics2D.Raycast (new Vector2(rigidbody2D.position.x, rigidbody2D.position.y+1.0f), rightUpperHorizontalOffset.normalized, rightUpperHorizontalOffset.sqrMagnitude, finalMask);
+
+
+		/*
+		Vector2  rightHorizontalCast = new Vector2 (rigidbody2D.position.x + horizontalCastSide, rigidbody2D.position.y-1.50f);
+		Vector2 rightHorizontalOffset = rightHorizontalCast - rigidbody2D.position;
+		hitHorizontalRight = Physics2D.Raycast (rigidbody2D.position, rightHorizontalOffset.normalized, rightHorizontalOffset.sqrMagnitude, finalMask);
+		
+		
+		Vector2  rightUpperHorizontalCastPosition = new Vector2 (rigidbody2D.position.x + horizontalCastSide, rigidbody2D.position.y+1.50f);
+		Vector2 rightUpperHorizontalOffset = rightUpperHorizontalCastPosition - rigidbody2D.position;
+		hitUpperHorizontalRight = Physics2D.Raycast (rigidbody2D.position, rightUpperHorizontalOffset.normalized, rightUpperHorizontalOffset.sqrMagnitude, finalMask);
 
 		if (rigidbody2D.velocity.x < 0 && (int) rigidbody2D.velocity.y==0) {
 			Vector2  leftHorizontalCastPosition = new Vector2 (rigidbody2D.position.x - horizontalCastSide, rigidbody2D.position.y-0.5f);
@@ -110,6 +160,17 @@ public class EnemyController : MonoBehaviour {
 				//Debug.Log("TAPPE PLATEFORME A L' HORIZONTALE VERS DROTIE");
 				rigidbody2D.velocity = rigidbody2D.velocity * (-1.0f);
 			}
+		}*/
+
+
+		if (hitHorizontalLeft.collider != null || hitUpperHorizontalLeft.collider!=null || hitHorizontalLowerLeft.collider!=null) {
+			Debug.Log("TAPPE PLATEFORME A L' HORIZONTALE VERS GAUCHE");
+			rigidbody2D.velocity = rigidbody2D.velocity * (-1.0f);
+		}
+
+		if (hitHorizontalRight.collider != null || hitUpperHorizontalRight.collider!=null || hitLowerHorizontalRight.collider!=null) {
+			Debug.Log("TAPPE PLATEFORME A L' HORIZONTALE VERS DROTIE");
+			rigidbody2D.velocity = rigidbody2D.velocity * (-1.0f);
 		}
 
 
