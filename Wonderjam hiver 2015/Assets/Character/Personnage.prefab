@@ -9,7 +9,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 482816}
   - 61: {fileID: 6182816}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: EnemyDetector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30,7 +30,7 @@ GameObject:
   - 114: {fileID: 11482816}
   - 61: {fileID: 6182818}
   - 82: {fileID: 8279192}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Personnage
   m_TagString: Player
   m_Icon: {fileID: 0}

@@ -1,5 +1,21 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &120752
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 420752}
+  - 61: {fileID: 6120752}
+  m_Layer: 9
+  m_Name: Floorcolider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &143472
 GameObject:
   m_ObjectHideFlags: 0
@@ -15,7 +31,7 @@ GameObject:
   - 114: {fileID: 11442318}
   - 82: {fileID: 8221600}
   - 61: {fileID: 6149662}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Tower
   m_TagString: Tower
   m_Icon: {fileID: 0}
@@ -32,13 +48,25 @@ GameObject:
   - 4: {fileID: 463302}
   - 212: {fileID: 21234098}
   - 114: {fileID: 11401106}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: spawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!4 &420752
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 120752}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -.349999994, z: 0}
+  m_LocalScale: {x: .100000001, y: .100000001, z: 1}
+  m_Children: []
+  m_Father: {fileID: 443472}
+  m_RootOrder: 1
 --- !u!4 &443472
 Transform:
   m_ObjectHideFlags: 1
@@ -46,10 +74,11 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 143472}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 17.3999996, y: .800000012, z: 0}
+  m_LocalPosition: {x: 147, y: 207, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 1}
   m_Children:
   - {fileID: 463302}
+  - {fileID: 420752}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &463302
@@ -90,13 +119,24 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_Radius: 2
   m_Center: {x: 0, y: 0}
+--- !u!61 &6120752
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 120752}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Size: {x: 4.01000023, y: .439999998}
+  m_Center: {x: -.0335525498, y: -.405682594}
 --- !u!61 &6149662
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 143472}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Size: {x: .424517989, y: .0235645305}
