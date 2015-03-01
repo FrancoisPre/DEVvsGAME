@@ -6,6 +6,14 @@ TextureImporter:
     21300002: Pose_1
     21300004: Pose_2
     21300006: Pose_3
+    21300008: Pose_4
+    21300010: Pose_5
+    21300012: Pose_6
+    21300014: Pose_7
+    21300016: Pose_8
+    21300018: Pose_9
+    21300020: Pose_10
+    21300022: Pose_11
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -50,8 +58,8 @@ TextureImporter:
     - name: Pose_0
       rect:
         serializedVersion: 2
-        x: 156
-        y: 1595
+        x: 67
+        y: 1694
         width: 414
         height: 709
       alignment: 0
@@ -60,32 +68,112 @@ TextureImporter:
     - name: Pose_1
       rect:
         serializedVersion: 2
-        x: 848
-        y: 1581
-        width: 480
-        height: 709
+        x: 550
+        y: 1714
+        width: 479
+        height: 708
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Pose_2
       rect:
         serializedVersion: 2
-        x: 1509
-        y: 1553
-        width: 520
-        height: 703
+        x: 1084
+        y: 1728
+        width: 521
+        height: 702
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Pose_3
       rect:
         serializedVersion: 2
-        x: 2187
-        y: 1605
-        width: 527
+        x: 1632
+        y: 1762
+        width: 525
         height: 682
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Pose_4
+      rect:
+        serializedVersion: 2
+        x: 2201
+        y: 1691
+        width: 397
+        height: 746
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Pose_5
+      rect:
+        serializedVersion: 2
+        x: 2623
+        y: 1732
+        width: 434
+        height: 714
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Pose_6
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 838
+        width: 510
+        height: 801
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Pose_7
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 862
+        width: 662
+        height: 708
       alignment: 9
-      pivot: {x: .50999999, y: .529999971}
+      pivot: {x: .5, y: .449999988}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Pose_8
+      rect:
+        serializedVersion: 2
+        x: 1317
+        y: 844
+        width: 432
+        height: 781
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Pose_9
+      rect:
+        serializedVersion: 2
+        x: 1872
+        y: 831
+        width: 366
+        height: 791
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Pose_10
+      rect:
+        serializedVersion: 2
+        x: 2259
+        y: 851
+        width: 425
+        height: 772
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Pose_11
+      rect:
+        serializedVersion: 2
+        x: 2739
+        y: 924
+        width: 688
+        height: 684
+      alignment: 9
+      pivot: {x: .449999988, y: .430000007}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
