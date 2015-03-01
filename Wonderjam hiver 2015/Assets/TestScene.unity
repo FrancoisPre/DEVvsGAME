@@ -2643,7 +2643,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 0:6:40
+  m_Text: 0:11:28
 --- !u!222 &384659270
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2766,9 +2766,9 @@ GameObject:
   - 61: {fileID: 403472373}
   - 82: {fileID: 403472372}
   - 50: {fileID: 403472379}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Totem 2
-  m_TagString: Untagged
+  m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9057,9 +9057,9 @@ GameObject:
   - 61: {fileID: 1222758905}
   - 82: {fileID: 1222758904}
   - 50: {fileID: 1222758906}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Totem
-  m_TagString: Untagged
+  m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11557,9 +11557,9 @@ GameObject:
   - 61: {fileID: 1529997635}
   - 82: {fileID: 1529997634}
   - 50: {fileID: 1529997641}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Totem 3
-  m_TagString: Untagged
+  m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
