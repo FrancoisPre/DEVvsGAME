@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour {
 	public float hardPush;
 	public float softPush;
 	public float curseTime;
+	public float maxcurse;
 	private bool doubleJump=false;
 	public float maxSpeed;
 
@@ -67,29 +68,33 @@ public class PlayerController : MonoBehaviour {
 				jumpable=true;
 			else
 				jumpable=false;
+
+
 	        movement = Input.GetAxis("Horizontal");
-	   		if (invertCmd)
-				if (debCurse + curseTime < Time.time)
+			/*				if (curseTime >= )
 					invertCmd = false;
 				else
-					movement = -movement;
-				if (Input.GetButtonDown ("Jump") && jumpable){
-					jumpComponnent = jumpSpeed;
-					audio.Play();
-					doubleJump=true;
-				}
-				else if (doubleJump&&Input.GetButtonDown("Jump")){
-					jumpComponnent = jumpSpeed;
-					doubleJump=false;
-					audio.Play();
-				}
-				else
-					jumpComponnent = 0.0f;
-		       
-				rigidbody2D.AddForce (Time.deltaTime * speed * new Vector2 (movement, jumpComponnent));
-				Vector2 vitesse = rigidbody2D.velocity;
-				vitesse.x =Mathf.Clamp(vitesse.x, -maxSpeed, maxSpeed);
-				rigidbody2D.velocity=vitesse;
+					movement = -movement;*/
+	   		if (invertCmd) 
+				movement = -movement;
+
+			if (Input.GetButtonDown ("Jump") && jumpable){
+				jumpComponnent = jumpSpeed;
+				audio.Play();
+				doubleJump=true;
+			}
+			else if (doubleJump&&Input.GetButtonDown("Jump")){
+				jumpComponnent = jumpSpeed;
+				doubleJump=false;
+				audio.Play();
+			}
+			else
+				jumpComponnent = 0.0f;
+	       
+			rigidbody2D.AddForce (Time.deltaTime * speed * new Vector2 (movement, jumpComponnent));
+			Vector2 vitesse = rigidbody2D.velocity;
+			vitesse.x =Mathf.Clamp(vitesse.x, -maxSpeed, maxSpeed);
+			rigidbody2D.velocity=vitesse;
 			}
 		}
 	}
