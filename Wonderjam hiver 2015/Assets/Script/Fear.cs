@@ -10,10 +10,12 @@ public class Fear : MonoBehaviour
 			if (other.tag == "Player") {
 				PlayerController player = (PlayerController)other.GetComponent ("PlayerController");
 				if (player.invertCmd == false) {
-					player.invertCmd = !player.invertCmd;
-					fuckthatscript = true;
-					audio.Play ();
-				}
+					player.invertCmd = true;
+				} else
+					player.invertCmd = false;
+
+				fuckthatscript = true;
+				audio.Play ();
 			}
 		}
 	}
