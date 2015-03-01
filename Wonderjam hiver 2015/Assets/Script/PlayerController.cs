@@ -63,6 +63,7 @@ public class PlayerController : MonoBehaviour {
 
 	// Update is called once per frame
 	void FixedUpdate () {
+		Debug.Log(Time.deltaTime);
 		if (Input.GetAxis ("Horizontal") < 0)
 			transform.localScale = noScale;
 		else
