@@ -14,14 +14,7 @@ public class TowerMasterList : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		//for (int i = 0; i<towers.Count; i++) {
-		//
-			//testatt = towers[i].GetComponent<Movingtower>();
-			//if (testatt.ready)
-			//	Debug.Log ("La tour #" + i + " = true");
-			//else
-			//	Debug.Log ("La tour #" + i + " = false");
-		//}
+
 	}
 
 	public bool checkMasterList () {

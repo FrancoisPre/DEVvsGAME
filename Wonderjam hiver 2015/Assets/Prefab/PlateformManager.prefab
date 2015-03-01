@@ -43,16 +43,18 @@ MonoBehaviour:
   moyen: {fileID: 476808, guid: 09c94ad0f40b7dd40ac9dc459bab890f, type: 2}
   grand: {fileID: 486628, guid: 44c775ae865b3214ba29cfb1d386248d, type: 2}
   numberOfObjects: 8
-  minGap: 15
-  maxGap: 40
+  minGap: 5
+  maxGap: 15
   minY: -10
   maxY: 7
   startPosition: {x: 5, y: -30, z: 0}
-  basicPlatform: {fileID: 451666, guid: dfe4dd476082d0441b3c288fef9509dd, type: 2}
   nbElemPetit: 4
   nbElemMoyen: 8
   nbElemGrand: 16
   exit: {fileID: 402142, guid: 873273e3c5de52346b3ba39c871d9707, type: 2}
+  correctif: 5
+  minEspacement: 30
+  basicPlatform: {fileID: 451666, guid: dfe4dd476082d0441b3c288fef9509dd, type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

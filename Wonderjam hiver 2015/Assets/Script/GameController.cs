@@ -10,7 +10,7 @@ public class GameController : MonoBehaviour {
 	private GameObject playerInstance;
 	private bool win;
 	public Vector3 playerSpawn;
-	private bool beginGame=false;
+	public bool beginGame=false;
 	// Use this for initialization
 	void Start () {
 	}
@@ -38,8 +38,9 @@ public class GameController : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKey(KeyCode.R))
-			GameOver();
+		if (Input.GetKey(KeyCode.P))
+			Application.LoadLevel(Application.loadedLevel);
+
         if (Time.time > timeOver&&!gameOver&&!win&&!beginGame) {
             gameOver = true;
 			GameObject.FindWithTag("Exit").GetComponent<GoalControl>().closeDoor();

@@ -10,9 +10,12 @@ public class PlatformManager : MonoBehaviour {
 	public Vector3 startPosition;
 	private Vector3 nextPosition1;
 	private Vector3 exitPosition;
-	public Transform basicPlatform;
+	private Vector3 previousPosition=new Vector3(0.0f,0.0f,5.0f);
 	public int nbElemPetit,nbElemMoyen,nbElemGrand;
 	public Transform exit;
+	public float correctif;
+	public float minEspacement;
+	public Transform basicPlatform;
 	// Use this for initialization
 	void Start () {
 		nextPosition1= startPosition;
@@ -35,23 +38,29 @@ public class PlatformManager : MonoBehaviour {
 	void spawnPlateform(){
 		{
 			int c = Random.Range(0,2);
-			int nb1;
+			float nb1;
+			Transform a;
 			if (c%3 == 0){
-				Instantiate(petit,nextPosition1, Quaternion.identity);
-				nb1 = nbElemPetit;
+				a =  Instantiate(petit,nextPosition1, Quaternion.identity) as Transform;
+				nb1 = (float) nbElemPetit * a.localScale.x;
 			}
 			else if (c%3 ==1){
-				Instantiate(moyen,nextPosition1, Quaternion.identity);
-				nb1 = nbElemMoyen;
+				a = Instantiate(moyen,nextPosition1, Quaternion.identity) as Transform;
+				nb1 = (float) nbElemMoyen * a.localScale.x;
 			}
 			else{
-				Instantiate(grand,nextPosition1, Quaternion.identity);
-				nb1 = nbElemGrand;
+				a = Instantiate(grand,nextPosition1, Quaternion.identity) as Transform;
+				nb1 = (float) nbElemGrand * a.localScale.x;
 			}
 			float size1;
-			size1 = nb1* basicPlatform.renderer.bounds.size.x;
+			size1 = nb1* basicPlatform.renderer.bounds.size.x*correctif;
+			Debug.Log(size1);
 			exitPosition = nextPosition1;
+			previousPosition = nextPosition1;
 			nextPosition1= nextPosition1 + new Vector3(Random.Range(minGap,maxGap) + size1,Random.Range(minY,maxY),0.0f);
+			while ((nextPosition1.x-previousPosition.x)<minEspacement){
+				nextPosition1 = nextPosition1 + new Vector3(Random.Range(minGap, minGap+minEspacement),0.0f,0.0f);			
+			}
 				
 		}
 	}
