@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class GameController : MonoBehaviour {
@@ -15,6 +16,8 @@ public class GameController : MonoBehaviour {
 	private bool playerspawnned=false;
 	public int coef;
 	private GameObject door;
+	private bool flipper = false;
+	public Button wookieflip;
 	// Use this for initialization
 	void Start () {
 		jInterface.SetActive (false);
@@ -50,6 +53,16 @@ public class GameController : MonoBehaviour {
 		return (int)Mathf.Floor (timeOver - Time.time);
 	}
 
+
+	public void flipWook(){
+		flipper = !flipper;
+		
+		if (flipper)
+			wookieflip.GetComponent<Image> ().color = Color.red;
+		else
+			wookieflip.GetComponent<Image> ().color = Color.white;
+	}
+
 	// Update is called once per frame
 	void FixedUpdate () {
 		if (Input.GetKey(KeyCode.P))
@@ -75,6 +88,7 @@ public class GameController : MonoBehaviour {
 		if (!playerspawnned){
 			playerspawnned = true;
 			playerInstance = (GameObject)Instantiate(player,playerSpawn,Quaternion.identity);
+			playerInstance.rigidbody2D.fixedAngle = !flipper;
 			timeOver = Time.time + timer;
 			beginGame = true;
 			GetComponent<TimerGUI> ().beginCountdown();
