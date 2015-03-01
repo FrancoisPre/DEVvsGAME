@@ -2541,7 +2541,7 @@ Rigidbody2D:
     type: 2}
   m_PrefabInternal: {fileID: 1146211181}
   m_GameObject: {fileID: 512713785}
-  m_Mass: 1
+  m_Mass: 342.220001
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 3
@@ -4034,7 +4034,7 @@ Rigidbody2D:
     type: 2}
   m_PrefabInternal: {fileID: 1073418826}
   m_GameObject: {fileID: 826152523}
-  m_Mass: 1
+  m_Mass: 342.220001
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 3
@@ -4429,7 +4429,7 @@ Rigidbody2D:
     type: 2}
   m_PrefabInternal: {fileID: 1775441946}
   m_GameObject: {fileID: 868351911}
-  m_Mass: 1
+  m_Mass: 342.220001
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 3
@@ -5167,7 +5167,7 @@ Rigidbody2D:
     type: 2}
   m_PrefabInternal: {fileID: 1448011672}
   m_GameObject: {fileID: 985208544}
-  m_Mass: 1
+  m_Mass: 342.220001
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 3
@@ -5978,7 +5978,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 443472, guid: 67d8fdc7d6f18c4478e079d130e523c1, type: 2}
       propertyPath: m_RootOrder
-      value: 13
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 443472, guid: 67d8fdc7d6f18c4478e079d130e523c1, type: 2}
       propertyPath: m_LocalScale.x
@@ -7498,7 +7498,7 @@ Rigidbody2D:
     type: 2}
   m_PrefabInternal: {fileID: 1965958716}
   m_GameObject: {fileID: 1436860373}
-  m_Mass: 1
+  m_Mass: 342.220001
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 3

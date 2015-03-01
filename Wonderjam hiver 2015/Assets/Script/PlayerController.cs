@@ -16,7 +16,6 @@ public class PlayerController : MonoBehaviour {
 	public float hardPush;
 	public float softPush;
 	public float curseTime;
-	public float maxcurse;
 	private bool doubleJump=false;
 	public float maxSpeed;
 
@@ -91,7 +90,10 @@ public class PlayerController : MonoBehaviour {
 			else
 				jumpComponnent = 0.0f;
 	       
-			rigidbody2D.AddForce (Time.deltaTime * speed * new Vector2 (movement, jumpComponnent));
+			if (!invertCmd)
+				rigidbody2D.AddForce (Time.deltaTime * speed * new Vector2 (movement, jumpComponnent));
+			else
+				rigidbody2D.AddForce (Time.deltaTime * -speed * new Vector2 (-movement, -jumpComponnent));
 			Vector2 vitesse = rigidbody2D.velocity;
 			vitesse.x =Mathf.Clamp(vitesse.x, -maxSpeed, maxSpeed);
 			rigidbody2D.velocity=vitesse;
