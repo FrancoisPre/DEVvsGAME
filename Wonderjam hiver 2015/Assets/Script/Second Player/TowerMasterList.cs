@@ -23,11 +23,8 @@ public class TowerMasterList : MonoBehaviour {
 			//Renvoie true si une des towers est déja ready
 
 			if (testatt.ready)
-			{
 				//Debug.Log ("La tour #" + i + " est ready, on renvoie false");
 				return false;
-			}
-				//Debug.Log ("La tour #" + i + " est pas ready");
 		}
 
 		return true;
@@ -38,5 +35,14 @@ public class TowerMasterList : MonoBehaviour {
 		towers.Add (newTower);
 		//Debug.Log ("Adding element to #" + (towers.Length));
 		//towers [towers.Length + 1] = newTower;
+	}
+
+	public void changeReady() {
+		for (int i = 0; i<towers.Count; i++) {
+			testatt = towers [i].GetComponent<Movingtower> ();
+			
+			if (testatt.ready)
+				testatt.changeReady ();
+		}
 	}
 }

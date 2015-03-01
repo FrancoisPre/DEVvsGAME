@@ -40,6 +40,7 @@ public class Movingtower : MonoBehaviour {
 	public void changeReady () { 
 		zeList = GameController.GetComponent<TowerMasterList>();
 		Debug.Log (zeList);
+		//if (zeList.checkMasterList() || ready)
 		if (zeList.checkMasterList() || ready)
 		{
 			ready = !ready; 
@@ -47,7 +48,8 @@ public class Movingtower : MonoBehaviour {
 				readyButton.GetComponent<Image> ().color = Color.red;
 			else
 				readyButton.GetComponent<Image> ().color = Color.white;
-		} else
-			Debug.Log ("Il existe deja un element qui se deplace");
+		} else 
+			zeList.changeReady();
+		
 	}
 }
