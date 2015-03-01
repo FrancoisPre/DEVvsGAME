@@ -52,7 +52,9 @@ public class EnemyController : MonoBehaviour {
 		RaycastHit2D hitLeft;
 		RaycastHit2D hitRight;
 		RaycastHit2D hitHorizontalLeft;
+		RaycastHit2D hitUpperHorizontalLeft;
 		RaycastHit2D hitHorizontalRight;
+		RaycastHit2D hitUpperHorizontalRight;
 		
 		
 		
@@ -73,13 +75,18 @@ public class EnemyController : MonoBehaviour {
 
 
 		if (rigidbody2D.velocity.x < 0 && (int) rigidbody2D.velocity.y==0) {
-			Vector2  leftHorizontalCastPosition = new Vector2 (rigidbody2D.position.x - horizontalCastSide, rigidbody2D.position.y);
+			Vector2  leftHorizontalCastPosition = new Vector2 (rigidbody2D.position.x - horizontalCastSide, rigidbody2D.position.y-0.5f);
 			//Debug.Log (leftHorizontalCastPosition);
 			Vector2 leftHorizontalOffset = leftHorizontalCastPosition - rigidbody2D.position;
 			//Debug.Log (leftHorizontalOffset);
 			hitHorizontalLeft = Physics2D.Raycast (rigidbody2D.position, leftHorizontalOffset.normalized, leftHorizontalOffset.sqrMagnitude, finalMask);
 
-			if (hitHorizontalLeft.collider != null) {
+
+			Vector2  leftUpperHorizontalCastPosition = new Vector2 (rigidbody2D.position.x - horizontalCastSide, rigidbody2D.position.y+0.5f);
+			Vector2 leftUpperHorizontalOffset = leftUpperHorizontalCastPosition - rigidbody2D.position;
+			hitUpperHorizontalLeft = Physics2D.Raycast (rigidbody2D.position, leftHorizontalOffset.normalized, leftHorizontalOffset.sqrMagnitude, finalMask);
+
+			if (hitHorizontalLeft.collider != null || hitUpperHorizontalLeft.collider!=null) {
 				//Debug.Log("TAPPE PLATEFORME A L' HORIZONTALE VERS GAUCHE");
 				rigidbody2D.velocity = rigidbody2D.velocity * (-1.0f);
 			}
@@ -88,13 +95,18 @@ public class EnemyController : MonoBehaviour {
 
 		else if(rigidbody2D.velocity.x>=0 &&(int)rigidbody2D.velocity.y==0)
 		{
-			Vector2  rightHorizontalCast = new Vector2 (rigidbody2D.position.x + horizontalCastSide, rigidbody2D.position.y);
+			Vector2  rightHorizontalCast = new Vector2 (rigidbody2D.position.x + horizontalCastSide, rigidbody2D.position.y-0.5f);
 			//Debug.Log (rightHorizontalCast);
 			Vector2 rightHorizontalOffset = rightHorizontalCast - rigidbody2D.position;
 			//Debug.Log (rightHorizontalOffset);
 			hitHorizontalRight = Physics2D.Raycast (rigidbody2D.position, rightHorizontalOffset.normalized, rightHorizontalOffset.sqrMagnitude, finalMask);
 
-			if (hitHorizontalRight.collider != null) {
+			
+			Vector2  rightUpperHorizontalCastPosition = new Vector2 (rigidbody2D.position.x + horizontalCastSide, rigidbody2D.position.y+0.5f);
+			Vector2 rightUpperHorizontalOffset = rightUpperHorizontalCastPosition - rigidbody2D.position;
+			hitUpperHorizontalRight = Physics2D.Raycast (rigidbody2D.position, rightUpperHorizontalOffset.normalized, rightUpperHorizontalOffset.sqrMagnitude, finalMask);
+
+			if (hitHorizontalRight.collider != null || hitUpperHorizontalRight.collider!=null) {
 				//Debug.Log("TAPPE PLATEFORME A L' HORIZONTALE VERS DROTIE");
 				rigidbody2D.velocity = rigidbody2D.velocity * (-1.0f);
 			}
