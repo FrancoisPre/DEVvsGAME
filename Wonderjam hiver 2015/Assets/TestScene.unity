@@ -954,8 +954,8 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Size: {x: 6.81730318, y: 3.47652721}
-  m_Center: {x: -.205196902, y: .441632479}
+  m_Size: {x: 6.71989346, y: 3.47652745}
+  m_Center: {x: -.229549423, y: .441632479}
 --- !u!4 &176885701
 Transform:
   m_ObjectHideFlags: 0
@@ -5671,6 +5671,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 20
   rayCastSide: 1
+  horizontalCastSide: 2
   maskPlatform: 11
 --- !u!212 &1059697721
 SpriteRenderer:

@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour {
 	public float curseTime;
 	private bool doubleJump=false;
 	public float maxSpeed;
+	public float raycastlenght;
 
 	//Variables d'initialisation (Mode tower -> Mode platformer)
 	public bool playerReady;
@@ -58,13 +59,15 @@ public class PlayerController : MonoBehaviour {
 		}
 		else{
 			RaycastHit2D hit;
-			Vector2 rayCastPosition = new Vector2(rigidbody2D.position.x,rigidbody2D.position.y-15);
+			Vector2 rayCastPosition = new Vector2(rigidbody2D.position.x,rigidbody2D.position.y-raycastlenght);
 			Vector2 offset = rayCastPosition - rigidbody2D.position;
 			hit = Physics2D.Raycast(rigidbody2D.position,offset.normalized,offset.sqrMagnitude,layermask);
 			float tmp = hit.distance;
 			//Debug.Log(tmp);
-			if (tmp!=0 && tmp<mindistjump)
+			if (tmp!=0 && tmp<mindistjump){
 				jumpable=true;
+				doubleJump=true;
+			}
 			else
 				jumpable=false;
 
@@ -80,7 +83,7 @@ public class PlayerController : MonoBehaviour {
 			if (Input.GetButtonDown ("Jump") && jumpable){
 				jumpComponnent = jumpSpeed;
 				audio.Play();
-				doubleJump=true;
+				//doubleJump=true;
 			}
 			else if (doubleJump&&Input.GetButtonDown("Jump")){
 				jumpComponnent = jumpSpeed;
