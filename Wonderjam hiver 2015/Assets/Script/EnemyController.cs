@@ -9,6 +9,8 @@ public class EnemyController : MonoBehaviour {
 	public int maskPlatform; //INDICE DU LAYER 
 	private Vector2 velocity;
 	private bool isSnap=false;
+	private bool goingRight=false;
+	private bool goingLeft=false;
 	
 	
 	private int finalMask;
@@ -165,10 +167,14 @@ public class EnemyController : MonoBehaviour {
 
 		if (hitHorizontalLeft.collider != null || hitUpperHorizontalLeft.collider!=null || hitHorizontalLowerLeft.collider!=null) {
 			Debug.Log("TAPPE PLATEFORME A L' HORIZONTALE VERS GAUCHE");
+			goingRight=true;
+			goingLeft=false;
 			rigidbody2D.velocity = rigidbody2D.velocity * (-1.0f);
 		}
 
 		if (hitHorizontalRight.collider != null || hitUpperHorizontalRight.collider!=null || hitLowerHorizontalRight.collider!=null) {
+			goingRight=false;
+			goingLeft=true;
 			Debug.Log("TAPPE PLATEFORME A L' HORIZONTALE VERS DROTIE");
 			rigidbody2D.velocity = rigidbody2D.velocity * (-1.0f);
 		}
@@ -178,10 +184,14 @@ public class EnemyController : MonoBehaviour {
 		// SI LE RAYCAST GAUCHE N'ENTRE PAS EN COLLISION AVEC UNE PLATEFORME
 		if ((hitLeft.collider == null) ) {
 			//Debug.Log ("rien a gauche");
+			goingRight=true;
+			goingLeft=false;
 			rigidbody2D.velocity = rigidbody2D.velocity * (-1.0f);
 		}
 		// SI LE RAYCAST DROITE N'ENTRE PAS EN COLLISION AVEC UNE PLATEFORME
 		if ((hitRight.collider == null)) {
+			goingRight=false;
+			goingLeft=true;
 			//Debug.Log ("rien a droite");
 			rigidbody2D.velocity = rigidbody2D.velocity * (-1.0f);
 		}
@@ -193,7 +203,17 @@ public class EnemyController : MonoBehaviour {
 			isSnap =true;
 			if (Random.value > 0.5f) {
 				velocity = speed * new Vector2 (1, 0);
+				goingRight=true;
+				goingLeft=false;
 			} else {
+				goingRight=false;
+				goingLeft=true;
+				velocity = speed * new Vector2 (-1,0);
+			}
+			if(goingRight){
+				velocity = speed * new Vector2 (1,0);
+			}
+			else{
 				velocity = speed * new Vector2 (-1,0);
 			}
 			rigidbody2D.velocity = velocity;
