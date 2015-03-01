@@ -126,6 +126,8 @@ MonoBehaviour:
   timer: 15
   player: {fileID: 0}
   playerSpawn: {x: 0, y: 0, z: 0}
+  beginGame: 0
+  jInterface: {fileID: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

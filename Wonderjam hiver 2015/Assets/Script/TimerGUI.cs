@@ -9,6 +9,7 @@ public class TimerGUI : MonoBehaviour {
 	private bool count=false;
 
 
+
 	// Use this for initialization
 	void Start () {
 		GameController gameController = GetComponent<GameController> ();
