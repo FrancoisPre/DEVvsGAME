@@ -10,19 +10,19 @@ public class GoalControl : MonoBehaviour {
 	
 	void OnTriggerEnter2D(Collider2D other){
 		if (other.tag==("Player")&&open){
-			GetComponent<SpriteRenderer>().color = Color.green;
+			//GetComponentInChildren<SpriteRenderer>().color = Color.green;
 			GameObject.FindWithTag("GameController").GetComponent<GameController>().Win();
 		}
 	}
 	
 	public void closeDoor(){
 		open=false;
-		GetComponent<SpriteRenderer>().color = Color.white;
+		//GetComponentInChildren<SpriteRenderer>().color = Color.white;
 	}
 
 	public void openDoor(){
 		open = true;
-		GetComponent<SpriteRenderer> ().color = Color.black;
+		//GetComponentInChildren<SpriteRenderer> ().color = Color.black;
 	}
 	
 	// Update is called once per frame

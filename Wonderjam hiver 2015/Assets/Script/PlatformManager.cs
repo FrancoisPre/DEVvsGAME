@@ -13,6 +13,7 @@ public class PlatformManager : MonoBehaviour {
 	private Vector3 previousPosition=new Vector3(0.0f,0.0f,5.0f);
 	public int nbElemPetit,nbElemMoyen,nbElemGrand;
 	public Transform exit;
+	public Transform exitRenderer;
 	public float correctif;
 	public float minEspacement;
 	public Transform basicPlatform;
@@ -32,8 +33,9 @@ public class PlatformManager : MonoBehaviour {
 	}
 
 	void spawnExit(){
+		Debug.Log("Hello");
 		float X = (float) basicPlatform.renderer.bounds.size.x*1.5f;
-		float Y = (float) basicPlatform.renderer.bounds.size.y*0.5f+exit.renderer.bounds.size.y * 0.5f;
+		float Y = (float) basicPlatform.renderer.bounds.size.y*0.5f+exitRenderer.renderer.bounds.size.y * 0.5f;
 		exitPosition += new Vector3(X, Y, 0.0f);
 		Instantiate(exit,exitPosition,Quaternion.identity);
 	}
