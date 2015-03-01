@@ -1316,7 +1316,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 431294, guid: b643b0684013ff54bb9662ac50609d11, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 431294, guid: b643b0684013ff54bb9662ac50609d11, type: 2}
       propertyPath: m_LocalScale.x
@@ -1498,8 +1498,8 @@ Transform:
   m_LocalPosition: {x: 189.5, y: -98.5999985, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1692397255}
   - {fileID: 1178111025}
+  - {fileID: 1692397255}
   - {fileID: 1059697715}
   - {fileID: 801815037}
   - {fileID: 958684706}
@@ -1727,7 +1727,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 222457524}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1692397249}
+        m_MethodName: changeReady
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &222457524
@@ -2643,7 +2655,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 0:11:28
+  m_Text: 0:2:88
 --- !u!222 &384659270
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3357,6 +3369,14 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 11405728, guid: cc6494bd94bfd5f468c54ce94adb14db, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11405690, guid: cc6494bd94bfd5f468c54ce94adb14db, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 22405742, guid: cc6494bd94bfd5f468c54ce94adb14db, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -3814,6 +3834,46 @@ Prefab:
     - target: {fileID: 11405708, guid: cc6494bd94bfd5f468c54ce94adb14db, type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: spawnPlayer
+      objectReference: {fileID: 0}
+    - target: {fileID: 11405728, guid: cc6494bd94bfd5f468c54ce94adb14db, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11405728, guid: cc6494bd94bfd5f468c54ce94adb14db, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11405728, guid: cc6494bd94bfd5f468c54ce94adb14db, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1692397249}
+    - target: {fileID: 11405728, guid: cc6494bd94bfd5f468c54ce94adb14db, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: changeReady
+      objectReference: {fileID: 0}
+    - target: {fileID: 11405728, guid: cc6494bd94bfd5f468c54ce94adb14db, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11405690, guid: cc6494bd94bfd5f468c54ce94adb14db, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11405690, guid: cc6494bd94bfd5f468c54ce94adb14db, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11405690, guid: cc6494bd94bfd5f468c54ce94adb14db, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1178111019}
+    - target: {fileID: 11405690, guid: cc6494bd94bfd5f468c54ce94adb14db, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: changeReady
+      objectReference: {fileID: 0}
+    - target: {fileID: 11405690, guid: cc6494bd94bfd5f468c54ce94adb14db, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cc6494bd94bfd5f468c54ce94adb14db, type: 2}
@@ -8879,7 +8939,7 @@ Transform:
   m_Children:
   - {fileID: 1755069644}
   m_Father: {fileID: 180435339}
-  m_RootOrder: 1
+  m_RootOrder: 0
 --- !u!1 &1202079247
 GameObject:
   m_ObjectHideFlags: 0
@@ -9673,7 +9733,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1274430099}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1178111019}
+        m_MethodName: changeReady
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1274430099
@@ -12056,7 +12128,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 431294, guid: b643b0684013ff54bb9662ac50609d11, type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 431294, guid: b643b0684013ff54bb9662ac50609d11, type: 2}
       propertyPath: m_LocalScale.x
@@ -12527,7 +12599,7 @@ Transform:
   m_Children:
   - {fileID: 1287077305}
   m_Father: {fileID: 180435339}
-  m_RootOrder: 0
+  m_RootOrder: 1
 --- !u!1 &1725154336
 GameObject:
   m_ObjectHideFlags: 0
