@@ -8,6 +8,7 @@ public class Fear : MonoBehaviour
 	{
 		if (!fuckthatscript) {
 			if (other.tag == "Player") {
+				audio.Play ();
 				PlayerController player = (PlayerController)other.GetComponent ("PlayerController");
 				if (player.invertCmd == false) {
 					player.invertCmd = true;
@@ -15,7 +16,6 @@ public class Fear : MonoBehaviour
 					player.invertCmd = false;
 
 				fuckthatscript = true;
-				audio.Play ();
 				GameObject mustDie = transform.GetChild(1).gameObject;
 				DestroyObject(mustDie);
 				//Destroy

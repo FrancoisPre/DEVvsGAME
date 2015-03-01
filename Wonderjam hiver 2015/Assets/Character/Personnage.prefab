@@ -30,6 +30,7 @@ GameObject:
   - 114: {fileID: 11433332}
   - 61: {fileID: 6133334}
   - 82: {fileID: 8233332}
+  - 81: {fileID: 8123494}
   m_Layer: 12
   m_Name: Personnage
   m_TagString: Player
@@ -99,6 +100,13 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_Size: {x: .170000002, y: .170000002}
   m_Center: {x: 0, y: 0}
+--- !u!81 &8123494
+AudioListener:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 182818}
+  m_Enabled: 1
 --- !u!82 &8233332
 AudioSource:
   m_ObjectHideFlags: 1
@@ -191,7 +199,7 @@ MonoBehaviour:
   debCurse: 0
   mindistjump: 5
   layerNumber: 11
-  hardPush: 3500
+  hardPush: 7000
   softPush: 1000
   curseTime: 1.5
   maxSpeed: 30

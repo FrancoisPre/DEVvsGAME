@@ -13,7 +13,7 @@ public class TowerController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		PlayerDetected = false;
-		Firerate = .5f;
+		Firerate = Firerate * Random.Range (0.5f, 2.0f);
 
 	}
 	
