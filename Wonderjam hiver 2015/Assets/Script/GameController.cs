@@ -14,6 +14,7 @@ public class GameController : MonoBehaviour {
 	public GameObject jInterface;
 	private bool playerspawnned=false;
 	public int coef;
+	private GameObject door;
 	// Use this for initialization
 	void Start () {
 		jInterface.SetActive (false);
@@ -24,13 +25,19 @@ public class GameController : MonoBehaviour {
 
 
 	public void Win(){
+		door = GameObject.FindWithTag ("Exit");
 		win=true;
 		audio.Play();
 		//play victory animation
 		//load next level
-		Invoke ("restart",5);
+		playerInstance.GetComponent<PlayerController>().gameOver();
+		Invoke ("restart",11);
+		GetComponent<TimerGUI> ().playerWon ();
 		//Application.LoadLevel(Application.loadedLevel);
+
+		Destroy (door);
 	}
+
 	void restart(){
 		Application.LoadLevel(Application.loadedLevel);
 	}
@@ -56,6 +63,7 @@ public class GameController : MonoBehaviour {
 			GameObject.FindWithTag("Exit").GetComponent<GoalControl>().closeDoor();
 			PlayerController tmp =playerInstance.GetComponent<PlayerController>();
 			tmp.gameOver();
+			GameObject.FindWithTag("Ending").audio.Play();
 			Invoke("GameOver",5);
         }
 		if (playerInstance!=null){
@@ -68,14 +76,9 @@ public class GameController : MonoBehaviour {
 			playerspawnned = true;
 			playerInstance = (GameObject)Instantiate(player,playerSpawn,Quaternion.identity);
 			timeOver = Time.time + timer;
-			Debug.Log (timer);
-			Debug.Log("GC");
-			Debug.Log (Time.time);
-			Debug.Log (timeOver);
 			beginGame = true;
-			GetComponent<TimerGUI> ().beginCountdown ();
+			GetComponent<TimerGUI> ().beginCountdown();
 			GameObject toKill = GameObject.FindWithTag ("TowerBuild");
-			//Instantiate (uij1, toKill.transform.position, toKill.transform.rotation);
 			Destroy (toKill);
 			jInterface.SetActive (true);
 		}

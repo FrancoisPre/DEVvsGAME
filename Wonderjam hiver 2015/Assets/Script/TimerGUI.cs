@@ -8,7 +8,7 @@ public class TimerGUI : MonoBehaviour {
 	private int countdownTimer;
 	private bool count=false;
 	private GameController gameController;
-
+	private bool playerW=false;
 
 
 	// Use this for initialization
@@ -25,7 +25,7 @@ public class TimerGUI : MonoBehaviour {
 	void FixedUpdate () {
 		if (count){
 			countdownTimer =  gameController.getTimer()*100;
-			if (countdownTimer < 0) {
+			if (countdownTimer < 0 || playerW) {
 				countdownTimer=0;
 				countdown.text = "Game Over";
 			}
@@ -38,6 +38,11 @@ public class TimerGUI : MonoBehaviour {
 			}
 		}
 	}
+
+	public void playerWon(){
+		playerW = true;
+	}
+
 	public void beginCountdown(){
 		count = true;
 		Debug.Log ("Let's Begin Biatch");

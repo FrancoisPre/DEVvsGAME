@@ -69,7 +69,6 @@ public class PlayerController : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate () {
 		Debug.Log(Time.deltaTime);
-
 		
 			if (Input.GetAxis ("Horizontal") < 0)
 				transform.localScale = noScale;
@@ -101,7 +100,7 @@ public class PlayerController : MonoBehaviour {
 				float tmpLeft = hitleft.distance;
 				float tmpRight = hitright.distance;
 				//Debug.Log(tmp);
-					if ((tmp!=0 && tmp<mindistjump)||(tmpLeft!=0 && tmpLeft<mindistjump)||(tmpRight!=0 && tmpRight<mindistjump)){
+				if ((tmp!=0 && tmp<mindistjump)||(tmpLeft!=0 && tmpLeft<mindistjump)||(tmpRight!=0 && tmpRight<mindistjump)){
 					jumpable=true;
 					doubleJump=true;
 				}
