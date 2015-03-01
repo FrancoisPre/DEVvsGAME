@@ -4,7 +4,7 @@ using System.Collections;
 public class CameraControl : MonoBehaviour {
 
 	public GameController gc;
-	public float speed = 25.0f;
+	public float speed = 90000.0f;
 	public float cameraDistanceMax = 20f;
 	public float cameraDistanceMin = 5f;
 	public float cameraDistance = 10f;
@@ -30,14 +30,14 @@ public class CameraControl : MonoBehaviour {
 			transform.Translate (new Vector3 (0, speed * Time.deltaTime, 0));
 		}
 		if (Input.GetKey (KeyCode.R)) {
-			camera.orthographicSize = camera.orthographicSize + 15*Time.deltaTime;
+			camera.orthographicSize = camera.orthographicSize + 40*Time.deltaTime;
 			if(camera.orthographicSize > 120)
 			{
 				camera.orthographicSize = 120; // Max size
 			}
 		}
 		if (Input.GetKey (KeyCode.F)) {
-			camera.orthographicSize = camera.orthographicSize - 15*Time.deltaTime;
+			camera.orthographicSize = camera.orthographicSize - 40*Time.deltaTime;
 			if(camera.orthographicSize < 70)
 			{
 				camera.orthographicSize = 70; // Min size 
