@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - Tower
   - TowerBuild
+  - PlateformManager
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX

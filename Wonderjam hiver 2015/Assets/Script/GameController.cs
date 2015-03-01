@@ -13,9 +13,13 @@ public class GameController : MonoBehaviour {
 	public bool beginGame=false;
 	public GameObject jInterface;
 	private bool playerspawnned=false;
+	public int coef;
 	// Use this for initialization
 	void Start () {
 		jInterface.SetActive (false);
+		int i =	GameObject.FindWithTag("PlateformManager").GetComponent<PlatformManager>().numberOfObjects;
+		timer = timer + i*coef;
+		GetComponent<TimerGUI>().initTimer();
 	}
 
 
@@ -43,8 +47,9 @@ public class GameController : MonoBehaviour {
 	void Update () {
 		if (Input.GetKey(KeyCode.P))
 			Application.LoadLevel(Application.loadedLevel);
-		if (Input.GetKey(KeyCode.KeypadEnter)&&!playerspawnned)
-		    spawnPlayer();
+		if (Input.GetKeyDown(KeyCode.L)&&!playerspawnned){
+			spawnPlayer();
+		}
         if (Time.time > timeOver&&!gameOver&&!win&&!beginGame) {
             gameOver = true;
 			GameObject.FindWithTag("Exit").GetComponent<GoalControl>().closeDoor();
@@ -56,15 +61,17 @@ public class GameController : MonoBehaviour {
 	}
 
 	public void spawnPlayer(){
-		playerspawnned = true;
-		playerInstance = (GameObject)Instantiate(player,playerSpawn,Quaternion.identity);
-		timeOver = Time.time + timer;
-		beginGame = true;
-		GetComponent<TimerGUI> ().beginCountdown ();
-		GameObject toKill = GameObject.FindWithTag ("TowerBuild");
-		//Instantiate (uij1, toKill.transform.position, toKill.transform.rotation);
-		Destroy (toKill);
-		jInterface.SetActive (true);
+		if (!playerspawnned){
+			playerspawnned = true;
+			playerInstance = (GameObject)Instantiate(player,playerSpawn,Quaternion.identity);
+			timeOver = Time.time + timer;
+			beginGame = true;
+			GetComponent<TimerGUI> ().beginCountdown ();
+			GameObject toKill = GameObject.FindWithTag ("TowerBuild");
+			//Instantiate (uij1, toKill.transform.position, toKill.transform.rotation);
+			Destroy (toKill);
+			jInterface.SetActive (true);
+		}
 	}
 }
 
