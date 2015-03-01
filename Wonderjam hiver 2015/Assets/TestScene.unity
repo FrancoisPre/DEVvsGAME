@@ -87,7 +87,7 @@ GameObject:
   - 114: {fileID: 5123578}
   - 114: {fileID: 5123577}
   m_Layer: 5
-  m_Name: Minion Ready3
+  m_Name: Wall Ready3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -253,7 +253,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Minions
+  m_Text: Walls
 --- !u!222 &20295915
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -272,7 +272,7 @@ GameObject:
   - 114: {fileID: 21460186}
   - 114: {fileID: 21460185}
   m_Layer: 5
-  m_Name: Minion Ready2
+  m_Name: Wall Ready2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2937,7 +2937,7 @@ GameObject:
   - 114: {fileID: 566499297}
   - 114: {fileID: 566499296}
   m_Layer: 5
-  m_Name: Minion Ready1
+  m_Name: Wall Ready1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3524,7 +3524,7 @@ RectTransform:
   m_RootOrder: 4
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 375, y: 289}
+  m_AnchoredPosition: {x: 373, y: 289}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &767008960
