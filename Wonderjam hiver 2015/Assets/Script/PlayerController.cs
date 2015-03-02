@@ -129,17 +129,24 @@ public class PlayerController : MonoBehaviour {
 					audio.Play ();
 					//doubleJump=true;
 				} else if (doubleJump && Input.GetButtonDown ("Jump")) {
+					Vector2 vel =rigidbody2D.velocity;
+					vel.y=0;
+					rigidbody2D.velocity=vel;
 					jumpComponnent = jumpSpeed;
 					anim.SetTrigger ("resaute");
 					doubleJump = false;
 					audio.Play ();
-				} else
-					jumpComponnent = 0.0f;
 
-				if (!invertCmd)
-					rigidbody2D.AddForce (Time.deltaTime * speed * new Vector2 (movement, jumpComponnent));
+				} else{
+					jumpComponnent= 0.0f;
+				}
+
+				if (!invertCmd){
+					rigidbody2D.AddForce (Time.deltaTime * speed * new Vector2 (movement, jumpComponnent), ForceMode2D.Force);
+				}
 				else
-					rigidbody2D.AddForce (Time.deltaTime * -speed * new Vector2 (-movement, -jumpComponnent));
+					rigidbody2D.AddForce (Time.deltaTime * -speed * new Vector2 (-movement, -jumpComponnent), ForceMode2D.Force);
+
 				Vector2 vitesse = rigidbody2D.velocity;
 				vitesse.x = Mathf.Clamp (vitesse.x, -maxSpeed, maxSpeed);
 				rigidbody2D.velocity = vitesse;
